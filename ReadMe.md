@@ -25,7 +25,7 @@ Create `docker-compose.yml` with lines below.
 version: '2'
 services:
   PGroonga:
-    image: PGroonga:2.1.8-alpine-11.1
+    image: groonga/pgroonga:2.1.8-alpine-11.1
     ports:
       - 5432:5432
     environment:
