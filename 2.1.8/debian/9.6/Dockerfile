@@ -12,7 +12,9 @@ RUN \
   apt update && \
   apt install -y \
     postgresql-9.6-pgroonga=${PGROONGA_VERSION} \
-    groonga-tokenizer-mecab
+    groonga-tokenizer-mecab && \
+  apt clean && \
+  rm -rf /var/lib/apt/lists/*
 
 RUN \
   echo "host all postgres 0.0.0.0/0 trust" >> \
