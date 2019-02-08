@@ -12,7 +12,9 @@ RUN \
   apt update && \
   apt install -y \
     postgresql-9.6-pgroonga=${PGROONGA_VERSION} \
-    groonga-tokenizer-mecab && \
+    groonga-tokenizer-mecab
+
+RUN \
   echo "host all postgres 0.0.0.0/0 trust" >> \
     /etc/postgresql/9.6/main/pg_hba.conf && \
   echo "listen_addresses = '*'" >> \
