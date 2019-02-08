@@ -8,7 +8,9 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 1. **PGroonga(v2.1.8)with Postgresql(v11.1) on alpine(v3.8)** `2.1.8-alpine-11.1`,`latest` ([dockerfile](https://github.com/pgroonga/docker/blob/master/2.1.8/alpine/11.1/Dockerfile))
 
-2. **PGroonga(v2.1.8)with Postgresql(v10.6) on alpine(v3.8)** `2.1.8-alpine-10.6` ([dockerfile](https://github.com/pgroonga/docker/tree/master/2.1.8/alpine/10.6/Dockerfile))
+1. **PGroonga(v2.1.8)with Postgresql(v10.6) on alpine(v3.8)** `2.1.8-alpine-10.6` ([dockerfile](https://github.com/pgroonga/docker/tree/master/2.1.8/alpine/10.6/Dockerfile))
+
+1. **PGroonga(v2.1.8)with Postgresql(v9.6) on Debian Stretch** `2.1.8-debian-9.6`,`latest-debian-9.6` ([dockerfile](https://github.com/pgroonga/docker/tree/master/2.1.8/debian/9.6/Dockerfile))
 
 ## Quick start
 
