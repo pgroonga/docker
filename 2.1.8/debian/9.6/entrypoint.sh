@@ -27,6 +27,5 @@ old_owner=$(stat --format %u ${db_dir})
 old_group=$(stat --format %u ${db_dir})
 
 chown -R postgres: ${db_dir}
-su postgres \
-  -c "${bin_dir}/postgres -D ${db_dir} -c config_file=${etc_dir}/postgresql.conf"
+pg_ctlcluster --foreground ${version} ${cluster_name} start
 chown -R ${old_owner}:${old_group} ${db_dir}
