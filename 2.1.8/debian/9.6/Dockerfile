@@ -16,20 +16,7 @@ RUN \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
-RUN \
-  echo "host all postgres 0.0.0.0/0 trust" >> \
-    /etc/postgresql/9.6/main/pg_hba.conf && \
-  echo "listen_addresses = '*'" >> \
-    /etc/postgresql/9.6/main/postgresql.conf && \
-  mkdir -p /var/run/postgresql/9.6-main.pg_stat_tmp && \
-  chown -R postgres: /var/run/postgresql
+COPY entrypoint.sh /entrypoint.sh
 
 EXPOSE 5432
-USER postgres
-ENTRYPOINT [ \
-  "/usr/lib/postgresql/9.6/bin/postgres", \
-  "-D", \
-  "/var/lib/postgresql/9.6/main", \
-  "-c", \
-  "config_file=/etc/postgresql/9.6/main/postgresql.conf" \
-]
+ENTRYPOINT ["/entrypoint.sh"]
