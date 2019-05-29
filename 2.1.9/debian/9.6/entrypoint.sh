@@ -9,6 +9,9 @@ state_dir=/var/run/postgresql
 base_db_dir=/var/lib/postgresql
 db_dir=${base_db_dir}/${version}/${cluster_name}
 
+original_owner=$(stat --format %u ${base_db_dir})
+original_group=$(stat --format %g ${base_db_dir})
+
 if [ ! -e ${db_dir} ]; then
   mkdir -p ${base_db_dir}
   chown -R postgres: ${base_db_dir}
@@ -23,9 +26,6 @@ echo "listen_addresses = '*'" >> \
 mkdir -p ${state_dir}/${version}-${cluster_name}.pg_stat_tmp
 chown -R postgres: ${state_dir}
 
-old_owner=$(stat --format %u ${db_dir})
-old_group=$(stat --format %u ${db_dir})
-
 chown -R postgres: ${db_dir}
 pg_ctlcluster --foreground ${version} ${cluster_name} start
-chown -R ${old_owner}:${old_group} ${db_dir}
+chown -R ${original_owner}:${original_group} ${base_db_dir}
