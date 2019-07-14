@@ -12,7 +12,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.2.0    | 10         | Alpine Linux             | 2.2.0-alpine-slim-10, latest-alpine-slim-10 | [alpine/10-slim/Dockefile][2.2.0-alpine-slim-10] |
 | 2.2.0    | 11         | Alpine Linux             | 2.2.0-alpine-11, latest-alpine-11, latest   | [alpine/11/Dockefile][2.2.0-alpine-11]           |
 | 2.2.0    | 10         | Alpine Linux             | 2.2.0-alpine-10, latest-alpine-10           | [alpine/10/Dockefile][2.2.0-alpine-10]           |
-| 2.2.0    | 9.6        | Debian GNU/Linux Stretch | 2.2.0-debiana-9.6, latest-debian-9.6        | [debian/9.6/Dockefile][2.2.0-debian-9.6]         |
+| 2.2.0    | 9.6        | Debian GNU/Linux Stretch | 2.2.0-debian-9.6, latest-debian-9.6         | [debian/9.6/Dockefile][2.2.0-debian-9.6]         |
 | 2.1.9    | 11         | Alpine Linux             | 2.1.9-alpine-11                             | [alpine/11/Dockefile][2.1.9-alpine-11]           |
 | 2.1.9    | 10         | Alpine Linux             | 2.1.9-alpine-10                             | [alpine/10/Dockefile][2.1.9-alpine-10]           |
 | 2.1.9    | 9.6        | Debian GNU/Linux Stretch | 2.1.9-debiana-9.6                           | [debian/9.6/Dockefile][2.1.9-debian-9.6]         |
