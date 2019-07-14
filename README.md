@@ -54,8 +54,8 @@ create extension pgroonga;
 
 please take a look at [PGroonga website](https://pgroonga.github.io/) for details
 
-[2.2.0-alpine-slim-11]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-11/alpine/11-slim/Dockerfile
-[2.2.0-alpine-slim-10]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-11/alpine/10-slim/Dockerfile
+[2.2.0-alpine-slim-11]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-11/alpine/slim-11/Dockerfile
+[2.2.0-alpine-slim-10]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-11/alpine/slim-10/Dockerfile
 [2.2.0-alpine-11]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-11/alpine/11/Dockerfile
 [2.2.0-alpine-10]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-10/alpine/10/Dockerfile
 [2.2.0-debian-9.6]: https://github.com/pgroonga/docker/tree/2.2.0-debian-9.6/debian/9.6/Dockerfile
