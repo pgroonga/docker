@@ -15,10 +15,10 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.2.0    | 9.6        | Debian GNU/Linux Stretch | 2.2.0-debian-9.6, latest-debian-9.6         | [debian/9.6/Dockefile][2.2.0-debian-9.6]         |
 | 2.1.9    | 11         | Alpine Linux             | 2.1.9-alpine-11                             | [alpine/11/Dockefile][2.1.9-alpine-11]           |
 | 2.1.9    | 10         | Alpine Linux             | 2.1.9-alpine-10                             | [alpine/10/Dockefile][2.1.9-alpine-10]           |
-| 2.1.9    | 9.6        | Debian GNU/Linux Stretch | 2.1.9-debiana-9.6                           | [debian/9.6/Dockefile][2.1.9-debian-9.6]         |
+| 2.1.9    | 9.6        | Debian GNU/Linux Stretch | 2.1.9-debian-9.6                            | [debian/9.6/Dockefile][2.1.9-debian-9.6]         |
 | 2.1.8    | 11.1       | Alpine Linux             | 2.1.8-alpine-11.1                           | [alpine/11.1/Dockefile][2.1.8-alpine-11.1]       |
 | 2.1.8    | 10.6       | Alpine Linux             | 2.1.8-alpine-10.6                           | [alpine/10.6/Dockefile][2.1.8-alpine-10.6]       |
-| 2.1.8    | 9.6        | Debian GNU/Linux Stretch | 2.1.8-debiana-9.6                           | [debian/9.6/Dockefile][2.1.8-debian-9.6]         |
+| 2.1.8    | 9.6        | Debian GNU/Linux Stretch | 2.1.8-debian-9.6                            | [debian/9.6/Dockefile][2.1.8-debian-9.6]         |
 
 ## Quick start
 
