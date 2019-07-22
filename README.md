@@ -8,6 +8,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution             | Tags                                        | Path                                             |
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------ |
+| 2.2.1    | 11         | Alpine Linux             | 2.2.1-alpine-11-slim, latest-alpine-11-slim | [alpine/11-slim/Dockefile][2.2.1-alpine-11-slim] |
+| 2.2.1    | 10         | Alpine Linux             | 2.2.1-alpine-10-slim, latest-alpine-10-slim | [alpine/10-slim/Dockefile][2.2.1-alpine-10-slim] |
+| 2.2.1    | 11         | Alpine Linux             | 2.2.1-alpine-11, latest-alpine-11, latest   | [alpine/11/Dockefile][2.2.1-alpine-11]           |
+| 2.2.1    | 10         | Alpine Linux             | 2.2.1-alpine-10, latest-alpine-10           | [alpine/10/Dockefile][2.2.1-alpine-10]           |
+| 2.2.1    | 9.6        | Debian GNU/Linux Stretch | 2.2.1-debian-9.6, latest-debian-9.6         | [debian/9.6/Dockefile][2.2.1-debian-9.6]         |
 | 2.2.0    | 11         | Alpine Linux             | 2.2.0-alpine-slim-11, latest-alpine-slim-11 | [alpine/slim-11/Dockefile][2.2.0-alpine-slim-11] |
 | 2.2.0    | 10         | Alpine Linux             | 2.2.0-alpine-slim-10, latest-alpine-slim-10 | [alpine/slim-10/Dockefile][2.2.0-alpine-slim-10] |
 | 2.2.0    | 11         | Alpine Linux             | 2.2.0-alpine-11, latest-alpine-11, latest   | [alpine/11/Dockefile][2.2.0-alpine-11]           |
@@ -54,6 +59,11 @@ create extension pgroonga;
 
 please take a look at [PGroonga website](https://pgroonga.github.io/) for details
 
+[2.2.1-alpine-11-slim]: https://github.com/pgroonga/docker/tree/2.2.1-alpine-11-slim/alpine/11-slim/Dockerfile
+[2.2.1-alpine-10-slim]: https://github.com/pgroonga/docker/tree/2.2.1-alpine-10-slim/alpine/10-slim/Dockerfile
+[2.2.1-alpine-11]: https://github.com/pgroonga/docker/tree/2.2.1-alpine-11/alpine/11/Dockerfile
+[2.2.1-alpine-10]: https://github.com/pgroonga/docker/tree/2.2.1-alpine-10/alpine/10/Dockerfile
+[2.2.1-debian-9.6]: https://github.com/pgroonga/docker/tree/2.2.1-debian-9.6/debian/9.6/Dockerfile
 [2.2.0-alpine-slim-11]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-slim-11/alpine/slim-11/Dockerfile
 [2.2.0-alpine-slim-10]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-slim-10/alpine/slim-10/Dockerfile
 [2.2.0-alpine-11]: https://github.com/pgroonga/docker/tree/2.2.0-alpine-11/alpine/11/Dockerfile
