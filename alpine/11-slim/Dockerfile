@@ -2,12 +2,12 @@ FROM postgres:11-alpine
 
 RUN apk --no-cache add build-base lz4-dev msgpack-c-dev zstd-dev
 
-ENV PGROONA_VER='2.2.0' \
-    GROONGA_VER='9.0.4'
+ENV PGROONGA_VER=2.2.1 \
+    GROONGA_VER=9.0.4
 RUN mkdir build && cd build &&\
-    wget https://packages.groonga.org/source/pgroonga/pgroonga-${PGROONA_VER}.tar.gz && tar xf pgroonga-${PGROONA_VER}.tar.gz && \
-    wget https://packages.groonga.org/source/groonga/groonga-${GROONGA_VER}.tar.gz && tar xf groonga-${GROONGA_VER}.tar.gz -C pgroonga-${PGROONA_VER}/vendor &&\
-    cd pgroonga-${PGROONA_VER}/vendor/groonga-${GROONGA_VER} &&\
+    wget https://packages.groonga.org/source/pgroonga/pgroonga-${PGROONGA_VER}.tar.gz && tar xf pgroonga-${PGROONGA_VER}.tar.gz && \
+    wget https://packages.groonga.org/source/groonga/groonga-${GROONGA_VER}.tar.gz && tar xf groonga-${GROONGA_VER}.tar.gz -C pgroonga-${PGROONGA_VER}/vendor &&\
+    cd pgroonga-${PGROONGA_VER}/vendor/groonga-${GROONGA_VER} &&\
     ./configure && make && make install &&\
     cd ../../ &&\
     make HAVE_MSGPACK=1 && make install
