@@ -1,6 +1,6 @@
 FROM debian:buster
 
-ENV PGROONGA_VERSION=2.2.1-1
+ENV PGROONGA_VERSION=2.2.2-1
 RUN \
   apt update && \
   apt install -y \
