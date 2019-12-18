@@ -13,6 +13,8 @@ RUN \
   apt install -y \
     postgresql-11-pgroonga=${PGROONGA_VERSION} \
     groonga-tokenizer-mecab && \
+  # TODO: Remove this when PGroonga 2.2.3 is released.
+  apt install -y postgresql-server-11 && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
