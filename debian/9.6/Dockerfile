@@ -14,7 +14,7 @@ RUN \
     postgresql-9.6-pgroonga=${PGROONGA_VERSION} \
     groonga-tokenizer-mecab && \
   # TODO: Remove this when PGroonga 2.2.3 is released.
-  apt install -y postgresql-server-9.6 && \
+  apt install -y postgresql-9.6 && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
