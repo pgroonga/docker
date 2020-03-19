@@ -2,8 +2,8 @@ FROM postgres:10-alpine
 
 RUN apk --no-cache add build-base lz4-dev msgpack-c-dev zstd-dev
 
-ENV PGROONGA_VERSION=2.2.2 \
-    GROONGA_VERSION=9.1.0
+ENV PGROONGA_VERSION=2.2.5 \
+    GROONGA_VERSION=9.1.2
 
 RUN mkdir build && cd build &&\
     wget https://packages.groonga.org/source/pgroonga/pgroonga-${PGROONGA_VERSION}.tar.gz && tar xf pgroonga-${PGROONGA_VERSION}.tar.gz && \
