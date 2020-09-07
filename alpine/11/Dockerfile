@@ -21,10 +21,10 @@ RUN \
   tar xf groonga-${GROONGA_VERSION}.tar.gz -C pgroonga-${PGROONGA_VERSION}/vendor && \
   cd pgroonga-${PGROONGA_VERSION}/vendor/groonga-${GROONGA_VERSION} && \
   ./configure && \
-  make && \
+  make -j$(nproc) && \
   make install && \
   cd ../../ && \
-  make HAVE_MSGPACK=1 && \
+  make HAVE_MSGPACK=1 -j$(nproc) && \
   make install && \
   cd ../ && \
   rm -rf build
