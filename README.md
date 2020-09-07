@@ -8,14 +8,14 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution             | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------- |
-| 2.2.6    | 12         | Alpine Linux             | 2.2.5-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][2.2.6-alpine-12-slim] |
-| 2.2.6    | 11         | Alpine Linux             | 2.2.5-alpine-11-slim, latest-alpine-11-slim | [alpine/11-slim/Dockerfile][2.2.6-alpine-11-slim] |
-| 2.2.6    | 10         | Alpine Linux             | 2.2.5-alpine-10-slim, latest-alpine-10-slim | [alpine/10-slim/Dockerfile][2.2.6-alpine-10-slim] |
-| 2.2.6    | 12         | Alpine Linux             | 2.2.5-alpine-12, latest-alpine-12, latest   | [alpine/12/Dockerfile][2.2.6-alpine-12]           |
-| 2.2.6    | 11         | Alpine Linux             | 2.2.5-alpine-11, latest-alpine-11           | [alpine/11/Dockerfile][2.2.6-alpine-11]           |
-| 2.2.6    | 10         | Alpine Linux             | 2.2.5-alpine-10, latest-alpine-10           | [alpine/10/Dockerfile][2.2.6-alpine-10]           |
-| 2.2.6    | 11         | Debian GNU/Linux Buster  | 2.2.5-debian-11, latest-debian-11           | [debian/11/Dockerfile][2.2.6-debian-11]           |
-| 2.2.6    | 9.6        | Debian GNU/Linux Stretch | 2.2.5-debian-9.6, latest-debian-9.6         | [debian/9.6/Dockerfile][2.2.6-debian-9.6]         |
+| 2.2.6    | 12         | Alpine Linux             | 2.2.6-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][2.2.6-alpine-12-slim] |
+| 2.2.6    | 11         | Alpine Linux             | 2.2.6-alpine-11-slim, latest-alpine-11-slim | [alpine/11-slim/Dockerfile][2.2.6-alpine-11-slim] |
+| 2.2.6    | 10         | Alpine Linux             | 2.2.6-alpine-10-slim, latest-alpine-10-slim | [alpine/10-slim/Dockerfile][2.2.6-alpine-10-slim] |
+| 2.2.6    | 12         | Alpine Linux             | 2.2.6-alpine-12, latest-alpine-12, latest   | [alpine/12/Dockerfile][2.2.6-alpine-12]           |
+| 2.2.6    | 11         | Alpine Linux             | 2.2.6-alpine-11, latest-alpine-11           | [alpine/11/Dockerfile][2.2.6-alpine-11]           |
+| 2.2.6    | 10         | Alpine Linux             | 2.2.6-alpine-10, latest-alpine-10           | [alpine/10/Dockerfile][2.2.6-alpine-10]           |
+| 2.2.6    | 11         | Debian GNU/Linux Buster  | 2.2.6-debian-11, latest-debian-11           | [debian/11/Dockerfile][2.2.6-debian-11]           |
+| 2.2.6    | 9.6        | Debian GNU/Linux Stretch | 2.2.6-debian-9.6, latest-debian-9.6         | [debian/9.6/Dockerfile][2.2.6-debian-9.6]         |
 | 2.2.5    | 12         | Alpine Linux             | 2.2.5-alpine-12-slim                        | [alpine/12-slim/Dockerfile][2.2.5-alpine-12-slim] |
 | 2.2.5    | 11         | Alpine Linux             | 2.2.5-alpine-11-slim                        | [alpine/11-slim/Dockerfile][2.2.5-alpine-11-slim] |
 | 2.2.5    | 10         | Alpine Linux             | 2.2.5-alpine-10-slim                        | [alpine/10-slim/Dockerfile][2.2.5-alpine-10-slim] |
