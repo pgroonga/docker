@@ -12,7 +12,3 @@ RUN apk --no-cache add build-base lz4-dev msgpack-c-dev zstd-dev &&\
     make HAVE_MSGPACK=1 -j$(nproc) && make install &&\
     cd ../ && rm -rf build &&\
     apk del build-base
-
-EXPOSE 5432
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["postgres"]

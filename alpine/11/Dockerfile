@@ -35,7 +35,3 @@ RUN \
     clang \
     clang-dev \
     llvm8
-
-EXPOSE 5432
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["postgres"]
