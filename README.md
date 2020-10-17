@@ -6,6 +6,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 ## Supported tags and respective Dockerfile links
 
+
 | PGroonga | PostgreSQL | Distribution             | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------- |
 | 2.2.6    | 12         | Alpine Linux             | 2.2.6-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][2.2.6-alpine-12-slim] |
@@ -51,6 +52,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.1.8    | 10.6       | Alpine Linux             | 2.1.8-alpine-10.6                           | [alpine/10.6/Dockerfile][2.1.8-alpine-10.6]       |
 | 2.1.8    | 9.6        | Debian GNU/Linux Stretch | 2.1.8-debian-9.6                            | [debian/9.6/Dockerfile][2.1.8-debian-9.6]         |
 
+
 ## Quick start
 
 ```shell
@@ -84,6 +86,7 @@ create extension pgroonga;
 ```
 
 please take a look at [PGroonga website](https://pgroonga.github.io/) for details
+
 
 [2.2.6-alpine-12-slim]: https://github.com/pgroonga/docker/tree/2.2.6-alpine-12-slim/alpine/12-slim/Dockerfile
 [2.2.6-alpine-11-slim]: https://github.com/pgroonga/docker/tree/2.2.6-alpine-11-slim/alpine/11-slim/Dockerfile
