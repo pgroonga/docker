@@ -2,7 +2,6 @@ FROM postgres:10-alpine
 
 RUN apk --no-cache add build-base lz4-dev msgpack-c-dev zstd-dev
 
-
 ENV PGROONGA_VERSION=2.2.6 \
     GROONGA_VERSION=10.0.6
 
@@ -13,7 +12,6 @@ RUN mkdir build && cd build &&\
     ./configure && make -j$(nproc) && make install &&\
     cd ../../ &&\
     make HAVE_MSGPACK=1 -j$(nproc) && make install
-
 
 FROM postgres:10-alpine
 
@@ -27,7 +25,3 @@ COPY --from=0 /usr/local/lib/groonga/ /usr/local/lib/groonga/
 # copy pgroonga extension files
 COPY --from=0 /usr/local/lib/postgresql/pgroonga.so /usr/local/lib/postgresql/pgroonga_check.so /usr/local/lib/postgresql/pgroonga_database.so /usr/local/lib/postgresql/
 COPY --from=0 /usr/local/share/postgresql/extension/pgroonga* /usr/local/share/postgresql/extension/
-
-EXPOSE 5432
-ENTRYPOINT ["docker-entrypoint.sh"]
-CMD ["postgres"]
