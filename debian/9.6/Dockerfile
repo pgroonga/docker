@@ -1,6 +1,6 @@
 FROM debian:stretch
 
-ENV PGROONGA_VERSION=2.2.6-1
+ENV PGROONGA_VERSION=2.2.7-1
 RUN \
   apt update && \
   apt install -y wget && \
