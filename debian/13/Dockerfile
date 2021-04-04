@@ -1,6 +1,6 @@
 FROM postgres:13
 
-ENV PGROONGA_VERSION=2.2.7-1
+ENV PGROONGA_VERSION=2.2.9-1
 RUN \
   apt update && \
   apt install -y wget && \
