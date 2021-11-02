@@ -3,12 +3,12 @@ FROM postgres:14-bullseye
 ENV PGROONGA_VERSION=2.3.2-1
 RUN \
   apt update && \
-  apt upgrade && \
-  apt install -y wget && \
+  apt upgrade -y -V && \
+  apt install -y -V wget && \
   wget https://packages.groonga.org/debian/groonga-apt-source-latest-bullseye.deb && \
   apt install -y -V ./groonga-apt-source-latest-bullseye.deb && \
   apt update && \
-  apt install -y \
+  apt install -y -V \
     postgresql-14-pgdg-pgroonga=${PGROONGA_VERSION} \
     groonga-normalizer-mysql \
     groonga-tokenizer-mecab && \
