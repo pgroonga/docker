@@ -7,6 +7,7 @@ RUN \
   apt install -y -V wget && \
   wget https://packages.groonga.org/debian/groonga-apt-source-latest-bullseye.deb && \
   apt install -y -V ./groonga-apt-source-latest-bullseye.deb && \
+  rm groonga-apt-source-latest-bullseye.deb && \
   apt update && \
   apt install -y -V \
     postgresql-14-pgdg-pgroonga=${PGROONGA_VERSION} \
