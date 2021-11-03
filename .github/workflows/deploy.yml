@@ -18,7 +18,7 @@ jobs:
             let tags=tag
             if(arch=='alpine') tags=tags+',latest'
             tags=tags+',latest-'+tag.split('-').splice(1).join('-')
-            console.log(`ref:${process.env.GITHUB_REF},dir:${dir},tag:${tag},tags:${tags}`)
+            core.info(`ref:${process.env.GITHUB_REF},dir:${dir},tag:${tag},tags:${tags}`)
             core.setOutput('tag', tag)
             core.setOutput('dir', dir)
             core.setOutput('tags', tags)
@@ -34,10 +34,10 @@ jobs:
       - uses: docker/build-push-action@v2
         id: docker_build
         with:
-          context: ${{ steps.parse.dir }}
-          file: ./Dockerfile
+          context: ${{ steps.parse.outputs.dir }}
+          # file: ./Dockerfile # maybe not needed
           push: true
-          tags: ${{ steps.parse.tags }}
+          tags: ${{ steps.parse.outputs.tags }}
       - name: Image digest
-        run: echo ${{ github.ref }} of ${{ steps.parse.tag }} build as ${{ steps.docker_build.outputs.digest }}`
+        run: echo ${{ github.ref }} of ${{ steps.parse.outputs.tag }} build as ${{ steps.docker_build.outputs.digest }}`
 
