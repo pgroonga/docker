@@ -1,13 +1,13 @@
-FROM postgres:12
+FROM postgres:12-bullseye
 
 ENV PGROONGA_VERSION=2.2.9-1
 RUN \
   apt update && \
   apt upgrade -y -V && \
   apt install -y -V wget && \
-  wget https://packages.groonga.org/debian/groonga-apt-source-latest-buster.deb && \
-  apt install -y -V ./groonga-apt-source-latest-buster.deb && \
-  rm groonga-apt-source-latest-buster.deb && \
+  wget https://packages.groonga.org/debian/groonga-apt-source-latest-bullseye.deb && \
+  apt install -y -V ./groonga-apt-source-latest-bullseye.deb && \
+  rm groonga-apt-source-latest-bullseye.deb && \
   apt update && \
   apt install -y -V \
     postgresql-12-pgdg-pgroonga=${PGROONGA_VERSION} \
