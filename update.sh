@@ -33,9 +33,6 @@ git add README.md
 message="PGroonga ${pgroonga_version} and Groonga ${groonga_version}"
 git commit -m "${message}"
 
-for docker_file in */*/Dockerfile; do
-  suffix=$(dirname ${docker_file} | ${SED} -e 's,/,-,')
-  tag="${pgroonga_version}-${suffix}"
-  echo ${tag}
-  git tag -a -m "${message}" ${tag}
-done
+tag="${pgroonga_version}"
+echo ${tag}
+git tag -a -m "${message}" ${tag}
