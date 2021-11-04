@@ -63,8 +63,8 @@ jobs:
       - uses: docker/build-push-action@v2
         id: docker_build
         with:
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          # cache-from: type=gha
+          # cache-to: type=gha,mode=max
           context: ${{ steps.parse.outputs.context }}
           push: true
           tags: ${{ steps.parse.outputs.tags }}
