@@ -37,7 +37,7 @@ File.readlines(readme_md_path).each do |line|
         type = type_path.gsub("/", "-")
         distribution_id, postgresql_version, = type.split("-")
         distribution = distribution_labels[distribution_id]
-        distribution += " Buster" if distribution_id == "debian"
+        distribution += " Bullseye" if distribution_id == "debian"
 
         components[1] = " %-#*s " % [pgroonga_version_width, pgroonga_version]
 
