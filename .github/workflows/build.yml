@@ -36,13 +36,15 @@ jobs:
           set -x
           distribution=$(echo ${{ matrix.id }} | grep -o "^[^-]*")
           variant=$(echo ${{ matrix.id }} | sed -e "s/^[^-]*-//g")
-          tags="groonga/pgroonga:latest-${{ matrix.id }}"
+          main_tag="groonga/pgroonga:latest-${{ matrix.id }}"
+          tags="${main_tag}"
           if [ ${{ matrix.id }} = "alpine-14" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
           echo "::set-output name=distribution::${distribution}"
           echo "::set-output name=variant::${variant}"
           echo "::set-output name=context::./${distribution}/${variant}"
+          echo "::set-output name=main-tag::${main_tag}"
           echo "::set-output name=tags::${tags}"
       - uses: actions/checkout@v2
       - uses: docker/login-action@v1
@@ -54,6 +56,7 @@ jobs:
       - uses: docker/build-push-action@v2
         id: docker_build
         with:
+          cache-from: ${{ steps.parse.outputs.main-tag }}
           context: ${{ steps.parse.outputs.context }}
           pull: true
           push: true
