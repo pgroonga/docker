@@ -56,9 +56,9 @@ jobs:
       - uses: docker/build-push-action@v2
         id: docker_build
         with:
-          cache-from: ${{ steps.parse.outputs.main-tag }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           context: ${{ steps.parse.outputs.context }}
-          pull: true
           push: true
           tags: ${{ steps.parse.outputs.tags }}
       - name: Image info
