@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+    tags:
   pull_request:
 concurrency:
   group: ${{ github.head_ref || github.sha }}-${{ github.workflow }}
@@ -36,15 +37,21 @@ jobs:
           set -x
           distribution=$(echo ${{ matrix.id }} | grep -o "^[^-]*")
           variant=$(echo ${{ matrix.id }} | sed -e "s/^[^-]*-//g")
-          main_tag="groonga/pgroonga:latest-${{ matrix.id }}"
-          tags="${main_tag}"
-          if [ ${{ matrix.id }} = "alpine-14" ]; then
+          case "${{ github.ref }}" in
+            refs/tags/*)
+              version=$(echo "${{ github.ref }}" | sed -e "s,^refs/tags/,,g")
+              ;;
+            *)
+              version=latest
+              ;;
+          esac
+          tags="groonga/pgroonga:${version}-${{ matrix.id }}"
+          if [ ${{ matrix.id }} = "alpine-14" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
           echo "::set-output name=distribution::${distribution}"
           echo "::set-output name=variant::${variant}"
           echo "::set-output name=context::./${distribution}/${variant}"
-          echo "::set-output name=main-tag::${main_tag}"
           echo "::set-output name=tags::${tags}"
       - uses: actions/checkout@v2
       - uses: docker/login-action@v1
