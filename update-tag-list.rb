@@ -72,7 +72,7 @@ File.readlines(readme_md_path).each do |line|
         type = type_path.gsub("/", "-")
         link = "[#{pgroonga_version}-#{type}]: "
         link << "https://github.com/pgroonga/docker"
-        link << "/tree/#{pgroonga_version}-#{type}"
+        link << "/tree/#{pgroonga_version}"
         link << "/#{type_path}/Dockerfile\n"
         readme_md_content << link
       end
