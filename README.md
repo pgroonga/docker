@@ -8,8 +8,8 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution             | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------- |
-| 2.3.2    | 14         | Alpine Linux             | 2.3.2-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][2.3.2-alpine-14]           |
-| 2.3.2    | 13         | Alpine Linux             | 2.3.2-alpine-13, latest-alpine-13, latest   | [alpine/13/Dockerfile][2.3.2-alpine-13]           |
+| 2.3.2    | 14         | Alpine Linux             | 2.3.2-alpine-14, latest-alpine-14, latest   | [alpine/14/Dockerfile][2.3.2-alpine-14]           |
+| 2.3.2    | 13         | Alpine Linux             | 2.3.2-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][2.3.2-alpine-13]           |
 | 2.3.2    | 12         | Alpine Linux             | 2.3.2-alpine-12, latest-alpine-12           | [alpine/12/Dockerfile][2.3.2-alpine-12]           |
 | 2.3.2    | 11         | Alpine Linux             | 2.3.2-alpine-11, latest-alpine-11           | [alpine/11/Dockerfile][2.3.2-alpine-11]           |
 | 2.3.2    | 10         | Alpine Linux             | 2.3.2-alpine-10, latest-alpine-10           | [alpine/10/Dockerfile][2.3.2-alpine-10]           |
