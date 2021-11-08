@@ -1,6 +1,6 @@
 FROM postgres:10-alpine
 
-ENV PGROONGA_VERSION=2.3.1 \
+ENV PGROONGA_VERSION=2.3.2 \
     GROONGA_VERSION=11.0.9
 RUN apk --no-cache add build-base lz4-dev msgpack-c-dev zstd-dev &&\
     mkdir build && cd build &&\
