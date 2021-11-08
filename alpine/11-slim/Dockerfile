@@ -9,7 +9,7 @@ RUN \
     msgpack-c-dev \
     zstd-dev
 
-ENV PGROONGA_VERSION=2.3.0 \
+ENV PGROONGA_VERSION=2.3.1 \
     GROONGA_VERSION=11.0.9
 RUN \
   mkdir build && \
