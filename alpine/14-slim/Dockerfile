@@ -4,7 +4,7 @@ RUN \
   apk --no-cache add \
     build-base \
     clang-dev \
-    llvm11 \
+    llvm12 \
     lz4-dev \
     msgpack-c-dev \
     zstd-dev
