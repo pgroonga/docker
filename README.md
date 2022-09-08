@@ -21,7 +21,6 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.3.8    | 14         | Debian GNU/Linux Bullseye | 2.3.8-debian-14, latest-debian-14           | [debian/14/Dockerfile][2.3.8-debian-14]           |
 | 2.3.8    | 13         | Debian GNU/Linux Bullseye | 2.3.8-debian-13, latest-debian-13           | [debian/13/Dockerfile][2.3.8-debian-13]           |
 | 2.3.8    | 12         | Debian GNU/Linux Bullseye | 2.3.8-debian-12, latest-debian-12           | [debian/12/Dockerfile][2.3.8-debian-12]           |
-| 2.3.8    | 11         | Debian GNU/Linux Bullseye | 2.3.8-debian-11, latest-debian-11           | [debian/11/Dockerfile][2.3.8-debian-11]           |
 | 2.3.7    | 14         | Alpine Linux             | 2.3.7-alpine-14                             | [alpine/14/Dockerfile][2.3.7-alpine-14]           |
 | 2.3.7    | 13         | Alpine Linux             | 2.3.7-alpine-13                             | [alpine/13/Dockerfile][2.3.7-alpine-13]           |
 | 2.3.7    | 12         | Alpine Linux             | 2.3.7-alpine-12                             | [alpine/12/Dockerfile][2.3.7-alpine-12]           |
