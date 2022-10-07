@@ -8,19 +8,32 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution             | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------- |
-| 2.3.8    | 14         | Alpine Linux             | 2.3.8-alpine-14, latest-alpine-14, latest   | [alpine/14/Dockerfile][2.3.8-alpine-14]           |
-| 2.3.8    | 13         | Alpine Linux             | 2.3.8-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][2.3.8-alpine-13]           |
-| 2.3.8    | 12         | Alpine Linux             | 2.3.8-alpine-12, latest-alpine-12           | [alpine/12/Dockerfile][2.3.8-alpine-12]           |
-| 2.3.8    | 11         | Alpine Linux             | 2.3.8-alpine-11, latest-alpine-11           | [alpine/11/Dockerfile][2.3.8-alpine-11]           |
-| 2.3.8    | 10         | Alpine Linux             | 2.3.8-alpine-10, latest-alpine-10           | [alpine/10/Dockerfile][2.3.8-alpine-10]           |
-| 2.3.8    | 14         | Alpine Linux             | 2.3.8-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][2.3.8-alpine-14-slim] |
-| 2.3.8    | 13         | Alpine Linux             | 2.3.8-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][2.3.8-alpine-13-slim] |
-| 2.3.8    | 12         | Alpine Linux             | 2.3.8-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][2.3.8-alpine-12-slim] |
-| 2.3.8    | 11         | Alpine Linux             | 2.3.8-alpine-11-slim, latest-alpine-11-slim | [alpine/11-slim/Dockerfile][2.3.8-alpine-11-slim] |
-| 2.3.8    | 10         | Alpine Linux             | 2.3.8-alpine-10-slim, latest-alpine-10-slim | [alpine/10-slim/Dockerfile][2.3.8-alpine-10-slim] |
-| 2.3.8    | 14         | Debian GNU/Linux Bullseye | 2.3.8-debian-14, latest-debian-14           | [debian/14/Dockerfile][2.3.8-debian-14]           |
-| 2.3.8    | 13         | Debian GNU/Linux Bullseye | 2.3.8-debian-13, latest-debian-13           | [debian/13/Dockerfile][2.3.8-debian-13]           |
-| 2.3.8    | 12         | Debian GNU/Linux Bullseye | 2.3.8-debian-12, latest-debian-12           | [debian/12/Dockerfile][2.3.8-debian-12]           |
+| 2.4.0    | 14         | Alpine Linux             | 2.4.0-alpine-14, latest-alpine-14, latest   | [alpine/14/Dockerfile][2.4.0-alpine-14]           |
+| 2.4.0    | 13         | Alpine Linux             | 2.4.0-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][2.4.0-alpine-13]           |
+| 2.4.0    | 12         | Alpine Linux             | 2.4.0-alpine-12, latest-alpine-12           | [alpine/12/Dockerfile][2.4.0-alpine-12]           |
+| 2.4.0    | 11         | Alpine Linux             | 2.4.0-alpine-11, latest-alpine-11           | [alpine/11/Dockerfile][2.4.0-alpine-11]           |
+| 2.4.0    | 10         | Alpine Linux             | 2.4.0-alpine-10, latest-alpine-10           | [alpine/10/Dockerfile][2.4.0-alpine-10]           |
+| 2.4.0    | 14         | Alpine Linux             | 2.4.0-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][2.4.0-alpine-14-slim] |
+| 2.4.0    | 13         | Alpine Linux             | 2.4.0-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][2.4.0-alpine-13-slim] |
+| 2.4.0    | 12         | Alpine Linux             | 2.4.0-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][2.4.0-alpine-12-slim] |
+| 2.4.0    | 11         | Alpine Linux             | 2.4.0-alpine-11-slim, latest-alpine-11-slim | [alpine/11-slim/Dockerfile][2.4.0-alpine-11-slim] |
+| 2.4.0    | 10         | Alpine Linux             | 2.4.0-alpine-10-slim, latest-alpine-10-slim | [alpine/10-slim/Dockerfile][2.4.0-alpine-10-slim] |
+| 2.4.0    | 14         | Debian GNU/Linux Bullseye | 2.4.0-debian-14, latest-debian-14           | [debian/14/Dockerfile][2.4.0-debian-14]           |
+| 2.4.0    | 13         | Debian GNU/Linux Bullseye | 2.4.0-debian-13, latest-debian-13           | [debian/13/Dockerfile][2.4.0-debian-13]           |
+| 2.4.0    | 12         | Debian GNU/Linux Bullseye | 2.4.0-debian-12, latest-debian-12           | [debian/12/Dockerfile][2.4.0-debian-12]           |
+| 2.3.8    | 14         | Alpine Linux             | 2.3.8-alpine-14                             | [alpine/14/Dockerfile][2.3.8-alpine-14]           |
+| 2.3.8    | 13         | Alpine Linux             | 2.3.8-alpine-13                             | [alpine/13/Dockerfile][2.3.8-alpine-13]           |
+| 2.3.8    | 12         | Alpine Linux             | 2.3.8-alpine-12                             | [alpine/12/Dockerfile][2.3.8-alpine-12]           |
+| 2.3.8    | 11         | Alpine Linux             | 2.3.8-alpine-11                             | [alpine/11/Dockerfile][2.3.8-alpine-11]           |
+| 2.3.8    | 10         | Alpine Linux             | 2.3.8-alpine-10                             | [alpine/10/Dockerfile][2.3.8-alpine-10]           |
+| 2.3.8    | 14         | Alpine Linux             | 2.3.8-alpine-14-slim                        | [alpine/14-slim/Dockerfile][2.3.8-alpine-14-slim] |
+| 2.3.8    | 13         | Alpine Linux             | 2.3.8-alpine-13-slim                        | [alpine/13-slim/Dockerfile][2.3.8-alpine-13-slim] |
+| 2.3.8    | 12         | Alpine Linux             | 2.3.8-alpine-12-slim                        | [alpine/12-slim/Dockerfile][2.3.8-alpine-12-slim] |
+| 2.3.8    | 11         | Alpine Linux             | 2.3.8-alpine-11-slim                        | [alpine/11-slim/Dockerfile][2.3.8-alpine-11-slim] |
+| 2.3.8    | 10         | Alpine Linux             | 2.3.8-alpine-10-slim                        | [alpine/10-slim/Dockerfile][2.3.8-alpine-10-slim] |
+| 2.3.8    | 14         | Debian GNU/Linux Bullseye | 2.3.8-debian-14                             | [debian/14/Dockerfile][2.3.8-debian-14]           |
+| 2.3.8    | 13         | Debian GNU/Linux Bullseye | 2.3.8-debian-13                             | [debian/13/Dockerfile][2.3.8-debian-13]           |
+| 2.3.8    | 12         | Debian GNU/Linux Bullseye | 2.3.8-debian-12                             | [debian/12/Dockerfile][2.3.8-debian-12]           |
 | 2.3.7    | 14         | Alpine Linux             | 2.3.7-alpine-14                             | [alpine/14/Dockerfile][2.3.7-alpine-14]           |
 | 2.3.7    | 13         | Alpine Linux             | 2.3.7-alpine-13                             | [alpine/13/Dockerfile][2.3.7-alpine-13]           |
 | 2.3.7    | 12         | Alpine Linux             | 2.3.7-alpine-12                             | [alpine/12/Dockerfile][2.3.7-alpine-12]           |
@@ -48,7 +61,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.3.4    | 14         | Debian GNU/Linux Bullseye | 2.3.4-debian-14                             | [debian/14/Dockerfile][2.3.4-debian-14]           |
 | 2.3.4    | 13         | Debian GNU/Linux Bullseye | 2.3.4-debian-13                             | [debian/13/Dockerfile][2.3.4-debian-13]           |
 | 2.3.4    | 12         | Debian GNU/Linux Bullseye | 2.3.4-debian-12                             | [debian/12/Dockerfile][2.3.4-debian-12]           |
-| 2.3.4    | 11         | Debian GNU/Linux Bullseye | 2.3.4-debian-11                             | [debian/11/Dockerfile][2.3.4-debian-11]           |
+| 2.3.4    | 11         | Debian GNU/Linux Buster | 2.3.4-debian-11                             | [debian/11/Dockerfile][2.3.4-debian-11]           |
 | 2.3.3    | 14         | Alpine Linux             | 2.3.3-alpine-14                             | [alpine/14/Dockerfile][2.3.3-alpine-14]           |
 | 2.3.3    | 13         | Alpine Linux             | 2.3.3-alpine-13                             | [alpine/13/Dockerfile][2.3.3-alpine-13]           |
 | 2.3.3    | 12         | Alpine Linux             | 2.3.3-alpine-12                             | [alpine/12/Dockerfile][2.3.3-alpine-12]           |
@@ -62,7 +75,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.3.3    | 14         | Debian GNU/Linux Bullseye | 2.3.3-debian-14                             | [debian/14/Dockerfile][2.3.3-debian-14]           |
 | 2.3.3    | 13         | Debian GNU/Linux Bullseye | 2.3.3-debian-13                             | [debian/13/Dockerfile][2.3.3-debian-13]           |
 | 2.3.3    | 12         | Debian GNU/Linux Bullseye | 2.3.3-debian-12                             | [debian/12/Dockerfile][2.3.3-debian-12]           |
-| 2.3.3    | 11         | Debian GNU/Linux Bullseye | 2.3.3-debian-11                             | [debian/11/Dockerfile][2.3.3-debian-11]           |
+| 2.3.3    | 11         | Debian GNU/Linux Buster | 2.3.3-debian-11                             | [debian/11/Dockerfile][2.3.3-debian-11]           |
 | 2.3.2    | 14         | Alpine Linux             | 2.3.2-alpine-14                             | [alpine/14/Dockerfile][2.3.2-alpine-14]           |
 | 2.3.2    | 13         | Alpine Linux             | 2.3.2-alpine-13                             | [alpine/13/Dockerfile][2.3.2-alpine-13]           |
 | 2.3.2    | 12         | Alpine Linux             | 2.3.2-alpine-12                             | [alpine/12/Dockerfile][2.3.2-alpine-12]           |
@@ -76,7 +89,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.3.2    | 14         | Debian GNU/Linux Bullseye | 2.3.2-debian-14                             | [debian/14/Dockerfile][2.3.2-debian-14]           |
 | 2.3.2    | 13         | Debian GNU/Linux Bullseye | 2.3.2-debian-13                             | [debian/13/Dockerfile][2.3.2-debian-13]           |
 | 2.3.2    | 12         | Debian GNU/Linux Bullseye | 2.3.2-debian-12                             | [debian/12/Dockerfile][2.3.2-debian-12]           |
-| 2.3.2    | 11         | Debian GNU/Linux Bullseye | 2.3.2-debian-11                             | [debian/11/Dockerfile][2.3.2-debian-11]           |
+| 2.3.2    | 11         | Debian GNU/Linux Buster | 2.3.2-debian-11                             | [debian/11/Dockerfile][2.3.2-debian-11]           |
 | 2.3.1    | 13         | Alpine Linux             | 2.3.1-alpine-13                             | [alpine/13/Dockerfile][2.3.1-alpine-13]           |
 | 2.3.1    | 12         | Alpine Linux             | 2.3.1-alpine-12                             | [alpine/12/Dockerfile][2.3.1-alpine-12]           |
 | 2.3.1    | 11         | Alpine Linux             | 2.3.1-alpine-11                             | [alpine/11/Dockerfile][2.3.1-alpine-11]           |
@@ -87,7 +100,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.3.1    | 10         | Alpine Linux             | 2.3.1-alpine-10-slim                        | [alpine/10-slim/Dockerfile][2.3.1-alpine-10-slim] |
 | 2.3.1    | 13         | Debian GNU/Linux Bullseye | 2.3.1-debian-13                             | [debian/13/Dockerfile][2.3.1-debian-13]           |
 | 2.3.1    | 12         | Debian GNU/Linux Bullseye | 2.3.1-debian-12                             | [debian/12/Dockerfile][2.3.1-debian-12]           |
-| 2.3.1    | 11         | Debian GNU/Linux Bullseye | 2.3.1-debian-11                             | [debian/11/Dockerfile][2.3.1-debian-11]           |
+| 2.3.1    | 11         | Debian GNU/Linux Buster | 2.3.1-debian-11                             | [debian/11/Dockerfile][2.3.1-debian-11]           |
 | 2.3.0    | 13         | Alpine Linux             | 2.3.0-alpine-13                             | [alpine/13/Dockerfile][2.3.0-alpine-13]           |
 | 2.3.0    | 12         | Alpine Linux             | 2.3.0-alpine-12                             | [alpine/12/Dockerfile][2.3.0-alpine-12]           |
 | 2.3.0    | 11         | Alpine Linux             | 2.3.0-alpine-11                             | [alpine/11/Dockerfile][2.3.0-alpine-11]           |
@@ -98,7 +111,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.3.0    | 10         | Alpine Linux             | 2.3.0-alpine-10-slim                        | [alpine/10-slim/Dockerfile][2.3.0-alpine-10-slim] |
 | 2.3.0    | 13         | Debian GNU/Linux Bullseye | 2.3.0-debian-13                             | [debian/13/Dockerfile][2.3.0-debian-13]           |
 | 2.3.0    | 12         | Debian GNU/Linux Bullseye | 2.3.0-debian-12                             | [debian/12/Dockerfile][2.3.0-debian-12]           |
-| 2.3.0    | 11         | Debian GNU/Linux Bullseye | 2.3.0-debian-11                             | [debian/11/Dockerfile][2.3.0-debian-11]           |
+| 2.3.0    | 11         | Debian GNU/Linux Buster | 2.3.0-debian-11                             | [debian/11/Dockerfile][2.3.0-debian-11]           |
 | 2.2.9    | 13         | Alpine Linux             | 2.2.9-alpine-13                             | [alpine/13/Dockerfile][2.2.9-alpine-13]           |
 | 2.2.9    | 12         | Alpine Linux             | 2.2.9-alpine-12                             | [alpine/12/Dockerfile][2.2.9-alpine-12]           |
 | 2.2.9    | 11         | Alpine Linux             | 2.2.9-alpine-11                             | [alpine/11/Dockerfile][2.2.9-alpine-11]           |
@@ -199,6 +212,19 @@ create extension pgroonga;
 
 please take a look at [PGroonga website](https://pgroonga.github.io/) for details
 
+[2.4.0-alpine-14]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/14/Dockerfile
+[2.4.0-alpine-13]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/13/Dockerfile
+[2.4.0-alpine-12]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/12/Dockerfile
+[2.4.0-alpine-11]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/11/Dockerfile
+[2.4.0-alpine-10]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/10/Dockerfile
+[2.4.0-alpine-14-slim]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/14-slim/Dockerfile
+[2.4.0-alpine-13-slim]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/13-slim/Dockerfile
+[2.4.0-alpine-12-slim]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/12-slim/Dockerfile
+[2.4.0-alpine-11-slim]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/11-slim/Dockerfile
+[2.4.0-alpine-10-slim]: https://github.com/pgroonga/docker/tree/2.4.0/alpine/10-slim/Dockerfile
+[2.4.0-debian-14]: https://github.com/pgroonga/docker/tree/2.4.0/debian/14/Dockerfile
+[2.4.0-debian-13]: https://github.com/pgroonga/docker/tree/2.4.0/debian/13/Dockerfile
+[2.4.0-debian-12]: https://github.com/pgroonga/docker/tree/2.4.0/debian/12/Dockerfile
 [2.3.8-alpine-14]: https://github.com/pgroonga/docker/tree/2.3.8/alpine/14/Dockerfile
 [2.3.8-alpine-13]: https://github.com/pgroonga/docker/tree/2.3.8/alpine/13/Dockerfile
 [2.3.8-alpine-12]: https://github.com/pgroonga/docker/tree/2.3.8/alpine/12/Dockerfile
