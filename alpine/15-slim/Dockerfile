@@ -37,5 +37,5 @@ COPY --from=0 /usr/lib/libzstd.so.1 /usr/lib/
 COPY --from=0 /usr/local/lib/libgroonga.so.0 /usr/local/lib/
 COPY --from=0 /usr/local/lib/groonga/ /usr/local/lib/groonga/
 # copy PGroonga extension files
-COPY --from=0 /usr/local/lib/postgresql/pgroonga.so /usr/local/lib/postgresql/pgroonga_check.so /usr/local/lib/postgresql/pgroonga_database.so /usr/local/lib/postgresql/
+COPY --from=0 /usr/local/lib/postgresql/pgroonga*.so /usr/local/lib/postgresql/
 COPY --from=0 /usr/local/share/postgresql/extension/pgroonga* /usr/local/share/postgresql/extension/
