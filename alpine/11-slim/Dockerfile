@@ -9,8 +9,8 @@ RUN \
     msgpack-c-dev \
     zstd-dev
 
-ENV PGROONGA_VERSION=2.4.1 \
-    GROONGA_VERSION=12.0.9
+ENV PGROONGA_VERSION=2.4.2 \
+    GROONGA_VERSION=12.1.0
 RUN \
   mkdir build && \
   cd build && \
