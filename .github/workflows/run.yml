@@ -1,0 +1,43 @@
+name: Run
+on:
+  schedule:
+    - cron: |
+        0 0 * * *
+  pull_request:
+concurrency:
+  group: ${{ github.head_ref || github.sha }}-${{ github.workflow }}
+  cancel-in-progress: true
+jobs:
+  run:
+    name: ${{ matrix.id }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        id:
+          - "alpine-15"
+          - "alpine-14"
+          - "alpine-13"
+          - "alpine-12"
+          - "alpine-11"
+          - "alpine-10"
+          - "alpine-15-slim"
+          - "alpine-14-slim"
+          - "alpine-13-slim"
+          - "alpine-12-slim"
+          - "alpine-11-slim"
+          - "alpine-10-slim"
+          - "debian-15"
+          - "debian-14"
+          - "debian-13"
+          - "debian-12"
+    steps:
+      - name: Run Docker image
+        run: |
+          sudo apt -u -V install \
+            curl \
+            jq
+          latest_version=`curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq .tag_name | sed s/\"//g`
+          tags="${latest_version}-${{ matrix.id }}"
+          docker_image="groonga/pgroonga:${tags}"
+          sudo docker run -d ${docker_image}
