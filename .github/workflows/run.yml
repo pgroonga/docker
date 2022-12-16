@@ -39,7 +39,7 @@ jobs:
             curl \
             jq \
             postgresql-client
-          latest_version=`curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq .tag_name | sed s/\"//g`
+          latest_version=$(curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq -r .tag_name)
           tags="${latest_version}-${{ matrix.id }}"
           docker_image="groonga/pgroonga:${tags}"
           sudo docker run \
