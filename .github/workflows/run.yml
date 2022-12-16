@@ -40,7 +40,7 @@ jobs:
             postgresql-client
           latest_version=$(curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq -r .tag_name)
           tags="${latest_version}-${{ matrix.id }}"
-          docker_image="groonga/pgroonga:${tags}"
+          docker_image="groonga/pgroonga:latest"
           sudo docker run \
             -p 5432:5432 \
             -e POSTGRES_DB=pgroonga \
