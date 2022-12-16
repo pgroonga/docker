@@ -52,12 +52,12 @@ jobs:
             -h 127.0.0.1 \
             -U pgroonga \
             -c "CREATE EXTENSION pgroonga;"
-          pgroonga_version=psql \
+          pgroonga_version=`psql \
                              -h 127.0.0.1 \
                              -U pgroonga \
                              -t \
                              -A \
-                             -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';"
+                             -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';"`
           if [ ${latest_version} -ne ${pgroonga_version} ]; then
             exit 1
           fi
