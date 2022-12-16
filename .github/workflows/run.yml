@@ -47,13 +47,8 @@ jobs:
             -e POSTGRES_PASSWORD=pgroonga \
             -e POSTGRES_USER=pgroonga \
             -d ${docker_image}
-          is_postgresql_process=false
-          while ! "${is_postgresql_process}" ;
-          do
-            postgresql_process=`ps axh | awk '{print $5}' | grep -x postgres`
-            if [ "${postgresql_process}" = "postgres" ]; then
-              is_postgresql_process=true
-            fi
+          until [ "$(ps axh | awk '{print $5}' | grep -x postgres)" = "postgres" ]; do
+            :
           done
           psql \
             -h 127.0.0.1 \
