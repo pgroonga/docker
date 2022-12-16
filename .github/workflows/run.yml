@@ -30,13 +30,34 @@ jobs:
           - "debian-14"
           - "debian-13"
           - "debian-12"
+    env:
+      PGPASSWORD: pgroonga
     steps:
       - name: Run Docker image
         run: |
           sudo apt -u -V install \
             curl \
-            jq
+            jq \
+            postgresql-client
           latest_version=`curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq .tag_name | sed s/\"//g`
           tags="${latest_version}-${{ matrix.id }}"
           docker_image="groonga/pgroonga:${tags}"
-          sudo docker run -d ${docker_image}
+          sudo docker run \
+            -p 5432:5432 \
+            -e POSTGRES_DB=pgroonga \
+            -e POSTGRES_PASSWORD=pgroonga \
+            -e POSTGRES_USER=pgroonga \
+            -d ${docker_image}
+          psql \
+            -h localhost \
+            -U pgroonga \
+            -c "CREATE EXTENSION pgroonga;"
+          pgroonga_version=psql \
+                             -h localhost \
+                             -U pgroonga \
+                             -t \
+                             -A \
+                             -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';"
+          if [ ${latest_version} -ne ${pgroonga_version} ]; then
+            exit 1
+          fi
