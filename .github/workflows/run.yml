@@ -47,6 +47,11 @@ jobs:
             -e POSTGRES_PASSWORD=pgroonga \
             -e POSTGRES_USER=pgroonga \
             -d ${docker_image}
+          postgresql_process=""
+          while [ ${postgresql_process} -ne "postgres" ]
+          do
+            postgresql_process=`ps axh | awk '{print $5}' | grep -x postgres`
+          done
           psql \
             -h 127.0.0.1 \
             -U pgroonga \
