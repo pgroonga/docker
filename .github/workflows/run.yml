@@ -47,10 +47,13 @@ jobs:
             -e POSTGRES_PASSWORD=pgroonga \
             -e POSTGRES_USER=pgroonga \
             -d ${docker_image}
-          postgresql_process=""
-          while [ ${postgresql_process} -ne "postgres" ];
+          is_postgresql_process=false
+          while ! "${is_postgresql_process}" ;
           do
             postgresql_process=`ps axh | awk '{print $5}' | grep -x postgres`
+            if [ "${postgresql_process}" = "postgres" ]; then
+              is_postgresql_process=true
+            fi
           done
           psql \
             -h 127.0.0.1 \
@@ -62,6 +65,7 @@ jobs:
                              -t \
                              -A \
                              -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';"`
-          if [ ${latest_version} -ne ${pgroonga_version} ]; then
+          if [ "${latest_version}" != "${pgroonga_version}" ]; then
             exit 1
           fi
+
