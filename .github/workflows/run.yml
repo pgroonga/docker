@@ -46,7 +46,7 @@ jobs:
             -e POSTGRES_DB=pgroonga \
             -e POSTGRES_PASSWORD=pgroonga \
             -e POSTGRES_USER=pgroonga \
-            -d ${docker_image}
+            -d groonga/pgroonga
           psql \
             -h localhost \
             -U pgroonga \
