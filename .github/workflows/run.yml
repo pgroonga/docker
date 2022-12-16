@@ -66,7 +66,6 @@ jobs:
                                -t \
                                -A \
                                -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';")
-          if [ "${latest_version}" != "${pgroonga_version}" ]; then
-            exit 1
-          fi
+          set -x
+          [ "${latest_version}" == "${pgroonga_version}" ]
 
