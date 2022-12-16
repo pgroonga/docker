@@ -33,6 +33,7 @@ jobs:
       PGPASSWORD: pgroonga
     steps:
       - name: Run Docker image
+        continue-on-error: true
         run: |
           sudo apt -u -V install \
             curl \
