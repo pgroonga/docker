@@ -36,6 +36,7 @@ jobs:
         run: |
           sudo apt -u -V install \
             curl \
+            docker.io \
             jq \
             postgresql-client
           latest_version=$(curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq -r .tag_name)
