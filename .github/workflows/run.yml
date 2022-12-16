@@ -50,6 +50,7 @@ jobs:
           until [ "$(ps axh | awk '{print $5}' | grep -x postgres)" = "postgres" ]; do
             :
           done
+          sleep 5
           psql \
             -h 127.0.0.1 \
             -U pgroonga \
