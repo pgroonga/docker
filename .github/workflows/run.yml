@@ -46,13 +46,13 @@ jobs:
             -e POSTGRES_DB=pgroonga \
             -e POSTGRES_PASSWORD=pgroonga \
             -e POSTGRES_USER=pgroonga \
-            -d groonga/pgroonga
+            -d ${docker_image}
           psql \
-            -h localhost \
+            -h 127.0.0.1 \
             -U pgroonga \
             -c "CREATE EXTENSION pgroonga;"
           pgroonga_version=psql \
-                             -h localhost \
+                             -h 127.0.0.1 \
                              -U pgroonga \
                              -t \
                              -A \
