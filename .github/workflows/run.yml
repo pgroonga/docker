@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: |
         0 0 * * *
+  pull_request:
 concurrency:
   group: ${{ github.head_ref || github.sha }}-${{ github.workflow }}
   cancel-in-progress: true
