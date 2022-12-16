@@ -48,9 +48,8 @@ jobs:
             -e POSTGRES_PASSWORD=pgroonga \
             -e POSTGRES_USER=pgroonga \
             -d ${docker_image}
-          pg_isready -h 127.0.0.1
-          until [ $? -ne 0 ]; do
-            pg_isready -h 127.0.0.1
+          while ! pg_isready -h 127.0.0.1 ; do
+            sleep 1
           done
           psql \
             -h 127.0.0.1 \
