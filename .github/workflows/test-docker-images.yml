@@ -5,7 +5,7 @@ on:
         0 0 * * *
   pull_request:
 concurrency:
-  group: ${{ github.head_ref || github.sha }}-${{ github.workflow }}
+  group: test
   cancel-in-progress: true
 jobs:
   run:
