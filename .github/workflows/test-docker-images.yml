@@ -1,4 +1,4 @@
-name: Run
+name: Test
 on:
   schedule:
     - cron: |
@@ -32,7 +32,7 @@ jobs:
     env:
       PGPASSWORD: pgroonga
     steps:
-      - name: Run Docker image
+      - name: Test Docker images
         run: |
           sudo apt -u -V install \
             curl \
