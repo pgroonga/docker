@@ -28,24 +28,34 @@ jobs:
           - "debian-14"
           - "debian-13"
           - "debian-12"
-    env:
-      PGPASSWORD: pgroonga
     steps:
-      - name: Test Docker images
+      - name: Install dependencies
         run: |
           sudo apt -u -V install \
             curl \
             jq \
             postgresql-client
-          latest_version=$(curl https://api.github.com/repos/pgroonga/pgroonga/releases/latest | jq -r .tag_name)
-          tags="${latest_version}-${{ matrix.id }}"
-          docker_image="groonga/pgroonga:${tags}"
+      - name: Detect the latest release
+        run: |
+          curl \
+            --fail \
+            https://api.github.com/repos/pgroonga/pgroonga/releases/latest | \
+              tee releases.json
+          latest_version=$(jq -r .tag_name releases.json)
+          echo "LATEST_VERSION=${latest_version}" >> $GITHUB_ENV
+      - name: Check PGroonga version
+        env:
+          PGPASSWORD: pgroonga
+        run: |
+          tag="${LATEST_VERSION}-${{ matrix.id }}"
+          docker_image="groonga/pgroonga:${tag}"
           sudo docker run \
-            -p 5432:5432 \
+            -d \
             -e POSTGRES_DB=pgroonga \
-            -e POSTGRES_PASSWORD=pgroonga \
+            -e POSTGRES_PASSWORD=${PGPASSWORD} \
             -e POSTGRES_USER=pgroonga \
-            -d ${docker_image}
+            -p 5432:5432 \
+            ${docker_image}
           for i in {1..60}; do
             if pg_isready -h 127.0.0.1; then
               break
@@ -53,18 +63,20 @@ jobs:
             sleep 1
           done
           if [ $i -eq 60 ]; then
-            echo "PostgreSQL not avalable"
+            echo "PostgreSQL isn't available"
+            exit 1
           fi
           psql \
             -h 127.0.0.1 \
             -U pgroonga \
             -c "CREATE EXTENSION pgroonga;"
-          pgroonga_version=$(psql \
-                               -h 127.0.0.1 \
-                               -U pgroonga \
-                               -t \
-                               -A \
-                               -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';")
+          pgroonga_version=$( \
+            psql \
+              -h 127.0.0.1 \
+              -U pgroonga \
+              -t \
+              -A \
+              -c "SELECT extversion FROM pg_catalog.pg_extension WHERE extname = 'pgroonga';" \
+          )
           set -x
           [ "${latest_version}" == "${pgroonga_version}" ]
-
