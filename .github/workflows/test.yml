@@ -39,7 +39,7 @@ jobs:
       - name: Detect the latest release
         run: |
           curl \
-            --fail \
+            --fail--with-body \
             https://api.github.com/repos/pgroonga/pgroonga/releases/latest | \
               tee releases.json
           latest_version=$(jq -r .tag_name releases.json)
