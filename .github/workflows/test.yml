@@ -39,9 +39,9 @@ jobs:
       - name: Detect the latest release
         run: |
           curl \
-            --fail--with-body \
-            https://api.github.com/repos/pgroonga/pgroonga/releases/latest | \
-              tee releases.json
+            --fail-with-body \
+            --output releases.json \
+            https://api.github.com/repos/pgroonga/pgroonga/releases/latest
           latest_version=$(jq -r .tag_name releases.json)
           echo "LATEST_VERSION=${latest_version}" >> $GITHUB_ENV
       - name: Check PGroonga version
