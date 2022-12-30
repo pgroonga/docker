@@ -37,9 +37,9 @@ jobs:
           set -x
           distribution=$(echo ${{ matrix.id }} | grep -o "^[^-]*")
           variant=$(echo ${{ matrix.id }} | sed -e "s/^[^-]*-//g")
-          case "${{ github.ref }}" in
+          case "${GITHUB_REF}" in
             refs/tags/*)
-              version=$(echo "${{ github.ref }}" | sed -e "s,^refs/tags/,,g")
+              version=${GITHUB_REF_NAME}
               ;;
             *)
               version=latest
@@ -70,6 +70,6 @@ jobs:
           tags: ${{ env.TAGS }}
       - name: Image info
         run: |
-          echo "ref: ${{ github.ref }}"
+          echo "ref: ${GITHUB_REF}"
           echo "tags: ${TAGS}"
           echo "digest: ${{ steps.docker_build.outputs.digest }}"
