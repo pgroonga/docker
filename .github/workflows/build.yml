@@ -40,36 +40,83 @@ jobs:
           case "${GITHUB_REF}" in
             refs/tags/*)
               version=${GITHUB_REF_NAME}
+              pgroonga_ref=${version}
               ;;
             *)
               version=latest
+              pgroonga_ref=$( \
+                grep --no-filename PGROONGA_VERSION= alpine/*/Dockerfile | \
+                  head -n 1 | \
+                  grep -o '[0-9]*' \
+              )
               ;;
           esac
-          tags="groonga/pgroonga:${version}-${{ matrix.id }}"
+          tag="groonga/pgroonga:${version}-${{ matrix.id }}"
+          tags=${tag}"
           if [ ${{ matrix.id }} = "alpine-14" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
-          echo "DISTRIBUTION=${distribution}" >> ${GITHUB_ENV}
-          echo "VARIANT=${variant}" >> ${GITHUB_ENV}
           echo "CONTEXT=./${distribution}/${variant}" >> ${GITHUB_ENV}
+          echo "DISTRIBUTION=${distribution}" >> ${GITHUB_ENV}
+          echo "PGROONGA_REF=${pgroonga_ref}" >> ${GITHUB_ENV}
+          echo "TAG=${tag}" >> ${GITHUB_ENV}
           echo "TAGS=${tags}" >> ${GITHUB_ENV}
-      - uses: actions/checkout@v2
-      - uses: docker/login-action@v1
+          echo "VARIANT=${variant}" >> ${GITHUB_ENV}
+          echo "VERSION=${version}" >> ${GITHUB_ENV}
+      - uses: actions/checkout@v3
+      - uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - uses: docker/setup-buildx-action@v1
         id: buildx
-      - uses: docker/build-push-action@v2
+      - uses: docker/build-push-action@v3
         id: docker_build
         with:
           # cache-from: type=gha
           # cache-to: type=gha,mode=max
           context: ${{ env.CONTEXT }}
-          push: true
           tags: ${{ env.TAGS }}
       - name: Image info
         run: |
           echo "ref: ${GITHUB_REF}"
           echo "tags: ${TAGS}"
           echo "digest: ${{ steps.docker_build.outputs.digest }}"
+      - uses: actions/checkout@v3
+        with:
+          path: pgroonga
+          ref: ${{ env.PGROONGA_REF }}
+          repository: pgroonga/pgroonga
+      - name: Test
+        env:
+          PGPASSWORD: pgroonga
+        run: |
+          docker run \
+            --name pgroonga \
+            -d \
+            -e POSTGRES_DB=pgroonga \
+            -e POSTGRES_PASSWORD=${PGPASSWORD} \
+            -e POSTGRES_USER=pgroonga \
+            --volume ${PWD}:/host \
+            ${TAG} \
+            postgres \
+            -c max_prepared_transactions=1
+          for i in {1..60}; do
+            if pg_isready -h 127.0.0.1; then
+              break
+            fi
+            sleep 1
+          done
+          if [ $i -eq 60 ]; then
+            echo "PostgreSQL isn't available"
+            exit 1
+          fi
+
+          cd pgroonga
+          ruby test/prepare.sh > schedule
+          docker exec pgroonga /host/test/run.sh
+      - uses: docker/build-push-action@v3
+        with:
+          context: ${{ env.CONTEXT }}
+          push: true
+          tags: ${{ env.TAGS }}
