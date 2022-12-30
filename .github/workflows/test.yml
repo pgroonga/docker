@@ -37,14 +37,18 @@ jobs:
             jq \
             postgresql-client
       - name: Detect the latest release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -o pipefail
           curl \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer ${GH_TOKEN}" \
             --fail-with-body \
             https://api.github.com/repos/pgroonga/pgroonga/releases/latest | \
               tee releases.json
           latest_version=$(jq -r .tag_name releases.json)
-          echo "LATEST_VERSION=${latest_version}" >> $GITHUB_ENV
+          echo "LATEST_VERSION=${latest_version}" >> ${GITHUB_ENV}
       - name: Check PGroonga version
         env:
           PGPASSWORD: pgroonga
