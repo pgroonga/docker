@@ -97,6 +97,7 @@ jobs:
             -e POSTGRES_DB=pgroonga \
             -e POSTGRES_PASSWORD=${PGPASSWORD} \
             -e POSTGRES_USER=pgroonga \
+            -p 127.0.0.1:5432:5432 \
             --volume ${PWD}:/host \
             ${TAG} \
             postgres \
