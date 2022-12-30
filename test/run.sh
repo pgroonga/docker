@@ -4,7 +4,7 @@ set -eux
 
 rm -rf output
 mkdir -p output
-cp -a /host/pgroonga/expects output/results
+cp -a /host/pgroonga/expected output/results
 
 export PG_REGRESS_DIFF_OPTS="-u --color=always"
 
