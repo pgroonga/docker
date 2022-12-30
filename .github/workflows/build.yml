@@ -48,7 +48,7 @@ jobs:
               pgroonga_ref=$( \
                 grep --no-filename PGROONGA_VERSION= alpine/*/Dockerfile | \
                   head -n 1 | \
-                  grep -o '[0-9]*' \
+                  grep -o '[0-9.]*' \
               )
               ;;
           esac
