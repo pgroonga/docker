@@ -33,7 +33,6 @@ jobs:
           - "debian-12"
     steps:
       - name: Parse ID
-        id: parse
         run: |
           set -x
           distribution=$(echo ${{ matrix.id }} | grep -o "^[^-]*")
@@ -50,10 +49,10 @@ jobs:
           if [ ${{ matrix.id }} = "alpine-14" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
-          echo "::set-output name=distribution::${distribution}"
-          echo "::set-output name=variant::${variant}"
-          echo "::set-output name=context::./${distribution}/${variant}"
-          echo "::set-output name=tags::${tags}"
+          echo "DISTRIBUTION=${distribution}" >> ${GITHUB_ENV}
+          echo "VARIANT=${variant}" >> ${GITHUB_ENV}
+          echo "CONTEXT=./${distribution}/${variant}" >> ${GITHUB_ENV}
+          echo "TAGS=${tags}" >> ${GITHUB_ENV}
       - uses: actions/checkout@v2
       - uses: docker/login-action@v1
         with:
@@ -66,11 +65,11 @@ jobs:
         with:
           # cache-from: type=gha
           # cache-to: type=gha,mode=max
-          context: ${{ steps.parse.outputs.context }}
+          context: ${{ env.CONTEXT }}
           push: true
-          tags: ${{ steps.parse.outputs.tags }}
+          tags: ${{ env.TAGS }}
       - name: Image info
         run: |
           echo "ref: ${{ github.ref }}"
-          echo "tags: ${{ steps.parse.outputs.tags }}"
+          echo "tags: ${TAGS}"
           echo "digest: ${{ steps.docker_build.outputs.digest }}"
