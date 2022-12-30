@@ -114,7 +114,7 @@ jobs:
           fi
 
           cd pgroonga
-          ruby test/prepare.sh > schedule
+          ruby test/prepare.rb > schedule
           docker exec pgroonga /host/test/run.sh
       - uses: docker/build-push-action@v3
         with:
