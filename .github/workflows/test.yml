@@ -1,5 +1,11 @@
 name: Test
 on:
+  push:
+    paths:
+      - '.github/workflows/test.yml'
+  pull_request:
+    paths:
+      - '.github/workflows/test.yml'
   schedule:
     - cron: |
         0 0 * * *
