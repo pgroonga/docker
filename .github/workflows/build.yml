@@ -37,6 +37,7 @@ jobs:
         run: |
           set -x
           distribution=$(echo ${{ matrix.id }} | grep -o "^[^-]*")
+          postgresql_version=$(echo ${{ matrix.id }} | grep -o "[0-9]*")
           variant=$(echo ${{ matrix.id }} | sed -e "s/^[^-]*-//g")
           case "${GITHUB_REF}" in
             refs/tags/*)
@@ -60,6 +61,7 @@ jobs:
           echo "CONTEXT=./${distribution}/${variant}" >> ${GITHUB_ENV}
           echo "DISTRIBUTION=${distribution}" >> ${GITHUB_ENV}
           echo "PGROONGA_REF=${pgroonga_ref}" >> ${GITHUB_ENV}
+          echo "POSTGRESQL_VERSION=${postgresql_version}" >> ${GITHUB_ENV}
           echo "TAG=${tag}" >> ${GITHUB_ENV}
           echo "TAGS=${tags}" >> ${GITHUB_ENV}
           echo "VARIANT=${variant}" >> ${GITHUB_ENV}
@@ -111,6 +113,14 @@ jobs:
           echo "::endgroup"
 
           cd pgroonga
+          # Reduce tests to reduce test time
+          rm -r sql/compatibility
+          if [ ${POSTGRESQL_VERSION} -lt 12 ]; then
+            rm sql/vacuum/two-phase-commit.sql
+          fi
+          if [ ${POSTGRESQL_VERSION} -lt 13 ]; then
+            rm sql/full-text-search/text/single/declarative-partitioning.sql
+          fi
           ruby test/prepare.rb > schedule
           docker exec pgroonga /host/test/run.sh
       - uses: docker/build-push-action@v3
