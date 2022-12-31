@@ -17,6 +17,7 @@ RUN \
   /build.sh ${PGROONGA_VERSION} ${GROONGA_VERSION} && \
   rm -f build.sh
 
+RUN \
   apk del \
     build-base \
     clang \
