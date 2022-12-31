@@ -58,7 +58,7 @@ jobs:
           if [ ${{ matrix.id }} = "alpine-14" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
-          echo "CONTEXT=./${distribution}/${variant}" >> ${GITHUB_ENV}
+          echo "DOCKERFILE=${distribution}/${variant}/Dockerfile" >> ${GITHUB_ENV}
           echo "DISTRIBUTION=${distribution}" >> ${GITHUB_ENV}
           echo "PGROONGA_REF=${pgroonga_ref}" >> ${GITHUB_ENV}
           echo "POSTGRESQL_VERSION=${postgresql_version}" >> ${GITHUB_ENV}
@@ -76,7 +76,8 @@ jobs:
         with:
           # cache-from: type=gha
           # cache-to: type=gha,mode=max
-          context: ${{ env.CONTEXT }}
+          context: .
+          file: ${{ env.DOCKERFILE }}
           load: true
           tags: ${{ env.TAGS }}
       - uses: actions/checkout@v3
@@ -131,7 +132,8 @@ jobs:
       - uses: docker/build-push-action@v3
         id: docker_push
         with:
-          context: ${{ env.CONTEXT }}
+          context: .
+          file: ${{ env.DOCKERFILE }}
           push: true
           tags: ${{ env.TAGS }}
       - name: Image info
