@@ -77,6 +77,7 @@ jobs:
           # cache-from: type=gha
           # cache-to: type=gha,mode=max
           context: ${{ env.CONTEXT }}
+          load: true
           tags: ${{ env.TAGS }}
       - uses: actions/checkout@v3
         with:
