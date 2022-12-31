@@ -12,6 +12,7 @@ RUN \
   apt install -y -V \
     postgresql-13-pgdg-pgroonga=${PGROONGA_VERSION} \
     groonga-normalizer-mysql \
+    groonga-token-filter-stem \
     groonga-tokenizer-mecab && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
