@@ -85,6 +85,7 @@ jobs:
         env:
           PGPASSWORD: pgroonga
         run: |
+          echo "::group::Prepare Docker image"
           docker run \
             --name pgroonga \
             -d \
@@ -107,6 +108,7 @@ jobs:
             echo "PostgreSQL isn't available"
             exit 1
           fi
+          echo "::endgroup"
 
           cd pgroonga
           ruby test/prepare.rb > schedule

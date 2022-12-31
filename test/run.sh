@@ -12,6 +12,8 @@ if diff --help | grep -q color; then
 fi
 export PG_REGRESS_DIFF_OPTS
 
+success=yes
+echo "::group::Run regression test"
 if ! $(dirname $(pg_config --pgxs))/../test/regress/pg_regress \
         --user=pgroonga \
         --schedule=/host/pgroonga/schedule \
@@ -19,6 +21,13 @@ if ! $(dirname $(pg_config --pgxs))/../test/regress/pg_regress \
         --outputdir=output \
         --load-extension=pgroonga \
         --launcher=/host/pgroonga/test/short-pgappname; then
+  success=no
+fi
+echo "::endgroup"
+
+if [ "${success}" = "no" ]; then
+  echo "::group::Diff"
   cat output/regression.diffs
+  echo "::endgroup"
   exit 1
 fi
