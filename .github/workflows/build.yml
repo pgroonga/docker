@@ -114,6 +114,10 @@ jobs:
           echo "::endgroup"
 
           cd pgroonga
+          if [ "${DISTRIBUTION}" = "alpine" ]; then
+           # TODO: Remove me when Groonga bundles libstemmer
+            rm sql/full-text-search/text/options/token-filters/custom.sql
+          fi
           # Reduce tests to reduce test time
           rm -r sql/compatibility
           if [ ${POSTGRESQL_VERSION} -lt 12 ]; then
