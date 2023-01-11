@@ -9,6 +9,7 @@ distribution_labels = {
 
 type_paths = []
 alpine_type_paths = Dir.glob("alpine/*")
+alpine_type_paths.delete("alpine/build.sh")
 alpine_slim_type_paths = Dir.glob("alpine/*-slim")
 alpine_type_paths -= alpine_slim_type_paths
 type_paths += alpine_type_paths.sort.reverse
