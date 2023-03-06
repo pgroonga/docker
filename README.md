@@ -10,7 +10,6 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------- |
 | 2.4.2    | 15         | Alpine Linux             | 2.4.2-alpine-15                             | [alpine/15/Dockerfile][2.4.2-alpine-15]           |
 | 2.4.3    | 15         | Alpine Linux             | 2.4.3-alpine-15                             | [alpine/15/Dockerfile][2.4.3-alpine-15]           |
-| 2.4.4    | build.sh   | Alpine Linux             | 2.4.4-alpine-build.sh, latest-alpine-build.sh | [alpine/build.sh/Dockerfile][2.4.4-alpine-build.sh] |
 | 2.4.4    | 15         | Alpine Linux             | 2.4.4-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][2.4.4-alpine-15]           |
 | 2.4.4    | 14         | Alpine Linux             | 2.4.4-alpine-14, latest-alpine-14, latest   | [alpine/14/Dockerfile][2.4.4-alpine-14]           |
 | 2.4.4    | 13         | Alpine Linux             | 2.4.4-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][2.4.4-alpine-13]           |
