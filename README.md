@@ -8,8 +8,6 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution             | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------ | ------------------------------------------- | ------------------------------------------------- |
-| 2.4.4    | 15         | Alpine Linux             | 2.4.4-alpine-15                             | [alpine/15/Dockerfile][2.4.4-alpine-15]           |
-| 2.4.5    | 15         | Alpine Linux             | 2.4.5-alpine-15                             | [alpine/15/Dockerfile][2.4.5-alpine-15]           |
 | 2.4.6    | 15         | Alpine Linux             | 2.4.6-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][2.4.6-alpine-15]           |
 | 2.4.6    | 14         | Alpine Linux             | 2.4.6-alpine-14, latest-alpine-14, latest   | [alpine/14/Dockerfile][2.4.6-alpine-14]           |
 | 2.4.6    | 13         | Alpine Linux             | 2.4.6-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][2.4.6-alpine-13]           |
@@ -24,6 +22,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.4.6    | 14         | Debian GNU/Linux Bullseye | 2.4.6-debian-14, latest-debian-14           | [debian/14/Dockerfile][2.4.6-debian-14]           |
 | 2.4.6    | 13         | Debian GNU/Linux Bullseye | 2.4.6-debian-13, latest-debian-13           | [debian/13/Dockerfile][2.4.6-debian-13]           |
 | 2.4.6    | 12         | Debian GNU/Linux Bullseye | 2.4.6-debian-12, latest-debian-12           | [debian/12/Dockerfile][2.4.6-debian-12]           |
+| 2.4.5    | 15         | Alpine Linux             | 2.4.5-alpine-15                             | [alpine/15/Dockerfile][2.4.5-alpine-15]           |
 | 2.4.5    | 14         | Alpine Linux             | 2.4.5-alpine-14                             | [alpine/14/Dockerfile][2.4.5-alpine-14]           |
 | 2.4.5    | 13         | Alpine Linux             | 2.4.5-alpine-13                             | [alpine/13/Dockerfile][2.4.5-alpine-13]           |
 | 2.4.5    | 12         | Alpine Linux             | 2.4.5-alpine-12                             | [alpine/12/Dockerfile][2.4.5-alpine-12]           |
@@ -37,6 +36,7 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 2.4.5    | 14         | Debian GNU/Linux Bullseye | 2.4.5-debian-14                             | [debian/14/Dockerfile][2.4.5-debian-14]           |
 | 2.4.5    | 13         | Debian GNU/Linux Bullseye | 2.4.5-debian-13                             | [debian/13/Dockerfile][2.4.5-debian-13]           |
 | 2.4.5    | 12         | Debian GNU/Linux Bullseye | 2.4.5-debian-12                             | [debian/12/Dockerfile][2.4.5-debian-12]           |
+| 2.4.4    | 15         | Alpine Linux             | 2.4.4-alpine-15                             | [alpine/15/Dockerfile][2.4.4-alpine-15]           |
 | 2.4.4    | 14         | Alpine Linux             | 2.4.4-alpine-14                             | [alpine/14/Dockerfile][2.4.4-alpine-14]           |
 | 2.4.4    | 13         | Alpine Linux             | 2.4.4-alpine-13                             | [alpine/13/Dockerfile][2.4.4-alpine-13]           |
 | 2.4.4    | 12         | Alpine Linux             | 2.4.4-alpine-12                             | [alpine/12/Dockerfile][2.4.4-alpine-12]           |
