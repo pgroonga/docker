@@ -55,7 +55,7 @@ jobs:
           esac
           tag="groonga/pgroonga:${version}-${{ matrix.id }}"
           tags="${tag}"
-          if [ ${{ matrix.id }} = "alpine-14" -a "${version}" = "latest" ]; then
+          if [ ${{ matrix.id }} = "alpine-15" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
           echo "DOCKERFILE=${distribution}/${variant}/Dockerfile" >> ${GITHUB_ENV}
