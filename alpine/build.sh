@@ -5,12 +5,14 @@ set -eux
 PGROONGA_VERSION=$1
 GROONGA_VERSION=$2
 
+MECAB_VERSION=0.996
+
 mkdir build
 cd build
 
 wget \
   -O mecab.tar.gz \
-  "https://drive.google.com/uc?export=download&id=0B4y35FiV1wh7cENtOXlicTFaRUE"
+  "https://packages.groonga.org/source/mecab/mecab-${MECAB_VERSION}.tar.gz"
 tar xf mecab.tar.gz
 cd mecab-*
 sed -i.bak -e 's,ipadic,naist-jdic,g' mecabrc.in
