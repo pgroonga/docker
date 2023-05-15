@@ -133,6 +133,7 @@ jobs:
         if: always()
         run: |
           docker exec pgroonga cp /var/lib/postgresql/data/pgroonga.log /host/
+          sudo chown ${USER}: pgroonga.log
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v3
