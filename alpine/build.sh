@@ -51,8 +51,8 @@ wget https://packages.groonga.org/source/pgroonga/pgroonga-${PGROONGA_VERSION}.t
 tar xf pgroonga-${PGROONGA_VERSION}.tar.gz
 cd pgroonga-${PGROONGA_VERSION}
 # TODO: We can remove this sed when PGroonga 3.0.3 was released.
-sed -i.bak -e 's/PACKAGES += msgpack/PACKAGES += msgpackc/' pgroonga.mk
-make HAVE_MSGPACK=1 MSGPACK_PACKAGE_NAME=msgpackc -j$(nproc)
+sed -i.bak -e 's/PACKAGES += msgpack/PACKAGES += msgpack-c/' pgroonga.mk
+make HAVE_MSGPACK=1 MSGPACK_PACKAGE_NAME=msgpack-c -j$(nproc)
 make install
 cd -
 
