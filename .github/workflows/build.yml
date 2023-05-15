@@ -129,6 +129,25 @@ jobs:
           fi
           ruby test/prepare.rb > schedule
           docker exec pgroonga /host/test/run.sh
+      - name: Collect logs
+        if: always()
+        run: |
+          docker exec pgroonga cp /var/lib/postgresql/data/pgroonga.log /host/
+      - name: Upload logs
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: logs
+          path: |
+            *.log
+      - name: Show logs
+        if: always()
+        run: |
+          for log in *.log; do
+            echo "::group::${log}"
+            cat "${log}"
+            echo "::endgroup"
+          done
       - uses: docker/build-push-action@v3
         id: docker_push
         with:
