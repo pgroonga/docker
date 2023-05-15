@@ -20,7 +20,7 @@ RUN \
 FROM postgres:11-alpine
 
 # copy thirdpart lib files
-COPY --from=0 /usr/lib/libmsgpackc.so.? /usr/lib/
+COPY --from=0 /usr/lib/libmsgpack-c.so.? /usr/lib/
 COPY --from=0 /usr/lib/liblz4.so.? /usr/lib/
 COPY --from=0 /usr/lib/libzstd.so.? /usr/lib/
 # copy MeCab files
