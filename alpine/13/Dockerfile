@@ -3,7 +3,7 @@ FROM postgres:13-alpine
 RUN \
   apk --no-cache add \
     build-base \
-    clang-dev \
+    clang15-dev \
     llvm15 \
     lz4-dev \
     msgpack-c-dev \
@@ -20,6 +20,6 @@ RUN \
 RUN \
   apk del \
     build-base \
-    clang \
-    clang-dev \
+    clang15 \
+    clang15-dev \
     llvm15
