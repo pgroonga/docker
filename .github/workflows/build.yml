@@ -119,7 +119,7 @@ jobs:
             # TODO: Remove me when Groonga bundles libstemmer
             rm sql/full-text-search/text/options/token-filters/custom.sql
             # TODO: I don't know why but pgroonga_command() is crashed...
-            rm sql/function/set-writable/wal-apply-*.out
+            rm sql/function/set-writable/wal-apply-*.sql
           fi
           # Reduce tests to reduce test time
           rm -r sql/compatibility
