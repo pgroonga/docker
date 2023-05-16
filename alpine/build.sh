@@ -52,7 +52,43 @@ tar xf pgroonga-${PGROONGA_VERSION}.tar.gz
 cd pgroonga-${PGROONGA_VERSION}
 # TODO: We can remove this sed when PGroonga 3.0.3 was released.
 sed -i.bak -e 's/PACKAGES += msgpack/PACKAGES += msgpack-c/' pgroonga.mk
-make HAVE_MSGPACK=1 MSGPACK_PACKAGE_NAME=msgpack-c -j$(nproc)
+patch -p1 <<EOF
+diff --git a/src/pgrn-wal.c b/src/pgrn-wal.c
+index 52d06c19..be588142 100644
+--- a/src/pgrn-wal.c
++++ b/src/pgrn-wal.c
+@@ -328,21 +328,20 @@ PGrnWALDataInitCurrent(PGrnWALData *data)
+ static void
+ PGrnWALDataFinish(PGrnWALData *data)
+ {
+-	GenericXLogFinish(data->state);
++	BlockNumber block;
++	LocationIndex offset;
+ 	if (data->current.page)
+ 	{
+-		PGrnIndexStatusSetWALAppliedPosition(
+-			data->index,
+-			BufferGetBlockNumber(data->current.buffer),
+-			PGrnWALPageGetLastOffset(data->current.page));
++		block = BufferGetBlockNumber(data->current.buffer);
++		offset = PGrnWALPageGetLastOffset(data->current.page);
+ 	}
+ 	else
+ 	{
+-		PGrnIndexStatusSetWALAppliedPosition(
+-			data->index,
+-			data->meta.pageSpecial->next,
+-			0);
++		block = data->meta.pageSpecial->next;
++		offset = 0;
+ 	}
++	GenericXLogFinish(data->state);
++	PGrnIndexStatusSetWALAppliedPosition(data->index, block, offset);
+ }
+ 
+ static void
+EOF
+make PGRN_DEBUG=yes HAVE_MSGPACK=1 MSGPACK_PACKAGE_NAME=msgpack-c -j$(nproc)
 make install
 cd -
 

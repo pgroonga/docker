@@ -83,7 +83,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           path: pgroonga
-          # ref: ${{ env.PGROONGA_REF }}
+          ref: ${{ env.PGROONGA_REF }}
           repository: pgroonga/pgroonga
       - name: Test
         env:
@@ -118,8 +118,6 @@ jobs:
           if [ "${DISTRIBUTION}" = "alpine" ]; then
             # TODO: Remove me when Groonga bundles libstemmer
             rm sql/full-text-search/text/options/token-filters/custom.sql
-            # TODO: I don't know why but pgroonga_command() is crashed...
-            rm sql/function/set-writable/wal-apply-*.sql
           fi
           # Reduce tests to reduce test time
           rm -r sql/compatibility
