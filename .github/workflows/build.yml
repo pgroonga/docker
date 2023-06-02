@@ -122,6 +122,8 @@ jobs:
           # Reduce tests to reduce test time
           rm -r sql/compatibility
           if [ ${POSTGRESQL_VERSION} -lt 12 ]; then
+            rm sql/function/highlight-html/declarative-partitioning.sql
+            rm sql/function/wal-set-applied-position/declarative-partitioning.sql
             rm sql/vacuum/two-phase-commit.sql
           fi
           if [ ${POSTGRESQL_VERSION} -lt 13 ]; then
