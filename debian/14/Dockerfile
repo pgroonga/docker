@@ -1,6 +1,6 @@
 FROM postgres:14-bullseye
 
-ENV PGROONGA_VERSION=3.0.6-1
+ENV PGROONGA_VERSION=3.0.7-1
 RUN \
   apt update && \
   apt upgrade -y -V && \
