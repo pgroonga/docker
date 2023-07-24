@@ -12,7 +12,7 @@ cd build
 
 wget \
   -O mecab.tar.gz \
-  "https://packages.groonga.org/source/mecab/mecab-${MECAB_VERSION}.tar.gz"
+  https://packages.groonga.org/source/mecab/mecab-${MECAB_VERSION}.tar.gz
 tar xf mecab.tar.gz
 cd mecab-*
 sed -i.bak -e 's,ipadic,naist-jdic,g' mecabrc.in
@@ -23,7 +23,7 @@ cd -
 
 wget \
   -O mecab-naist-jdic.tar.gz \
-  "https://ja.osdn.net/frs/redir.php?m=nchc&f=naist-jdic%2F53500%2Fmecab-naist-jdic-0.6.3b-20111013.tar.gz"
+  https://packages.groonga.org/source/mecab-naist-jdic/mecab-naist-jdic-0.6.3b-20111013.tar.gz
 tar xf mecab-naist-jdic.tar.gz
 cd mecab-naist-jdic-*
 ./configure \
