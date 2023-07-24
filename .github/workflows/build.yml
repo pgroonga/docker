@@ -81,11 +81,18 @@ jobs:
       - uses: docker/setup-buildx-action@v2
         id: buildx
       - uses: docker/build-push-action@v4
+        id: build-push
         with:
           context: .
           file: ${{ env.DOCKERFILE }}
           platforms: ${{ env.PLATFORMS }}
+          push: true
           tags: ${{ env.TAGS }}
+      - name: Image info
+        run: |
+          echo "ref: ${GITHUB_REF}"
+          echo "tags: ${TAGS}"
+          echo "digest: ${{ steps.build-push.outputs.digest }}"
       - uses: actions/checkout@v3
         with:
           path: pgroonga
@@ -185,16 +192,3 @@ jobs:
             cat "${log}"
             echo "::endgroup"
           done
-      - uses: docker/build-push-action@v4
-        id: docker_push
-        with:
-          context: .
-          file: ${{ env.DOCKERFILE }}
-          platforms: ${{ env.PLATFORMS }}
-          push: true
-          tags: ${{ env.TAGS }}
-      - name: Image info
-        run: |
-          echo "ref: ${GITHUB_REF}"
-          echo "tags: ${TAGS}"
-          echo "digest: ${{ steps.docker_push.outputs.digest }}"
