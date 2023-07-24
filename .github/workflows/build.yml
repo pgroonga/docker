@@ -58,8 +58,15 @@ jobs:
           if [ ${{ matrix.id }} = "alpine-15" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
+          platforms="linux/amd64"
+          case "${{ matrix.id }}" in
+            debian-*)
+              platforms="${platforms},linux/arm64"
+              ;;
+          esac
           echo "DOCKERFILE=${distribution}/${variant}/Dockerfile" >> ${GITHUB_ENV}
           echo "DISTRIBUTION=${distribution}" >> ${GITHUB_ENV}
+          echo "PLATFORMS=${platforms}" >> ${GITHUB_ENV}
           echo "PGROONGA_REF=${pgroonga_ref}" >> ${GITHUB_ENV}
           echo "POSTGRESQL_VERSION=${postgresql_version}" >> ${GITHUB_ENV}
           echo "TAG=${tag}" >> ${GITHUB_ENV}
@@ -70,6 +77,7 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+      - uses: docker/setup-qemu-action@v2
       - uses: docker/setup-buildx-action@v2
         id: buildx
       - uses: docker/build-push-action@v4
@@ -79,6 +87,7 @@ jobs:
           context: .
           file: ${{ env.DOCKERFILE }}
           load: true
+          platforms: ${{ env.PLATFORMS }}
           tags: ${{ env.TAGS }}
       - uses: actions/checkout@v3
         with:
@@ -89,32 +98,8 @@ jobs:
         env:
           PGPASSWORD: pgroonga
         run: |
-          echo "::group::Prepare Docker image"
-          docker run \
-            --name pgroonga \
-            -d \
-            -e POSTGRES_DB=pgroonga \
-            -e POSTGRES_PASSWORD=${PGPASSWORD} \
-            -e POSTGRES_USER=pgroonga \
-            -p 127.0.0.1:5432:5432 \
-            --volume ${PWD}:/host \
-            ${TAG} \
-            postgres \
-            -c max_prepared_transactions=1 \
-            -c search_path=public
-          for i in {1..60}; do
-            if pg_isready -h 127.0.0.1; then
-              break
-            fi
-            sleep 1
-          done
-          if [ $i -eq 60 ]; then
-            echo "PostgreSQL isn't available"
-            exit 1
-          fi
-          echo "::endgroup"
-
-          cd pgroonga
+          echo "::group::Prepare tests"
+          pushd pgroonga
           if [ "${DISTRIBUTION}" = "alpine" ]; then
             # TODO: Remove me when Groonga bundles libstemmer
             rm sql/full-text-search/text/options/token-filters/custom.sql
@@ -130,12 +115,64 @@ jobs:
             rm sql/full-text-search/text/single/declarative-partitioning.sql
           fi
           ruby test/prepare.rb > schedule
-          docker exec pgroonga /host/test/run.sh
+          popd
+          echo "::endgroup"
+
+          for platform in $(echo ${PLATFORMS} | tr "," " "); do
+            echo "::group::Prepare Docker container for ${platform}"
+            docker run \
+              --name pgroonga \
+              --detach \
+              --env POSTGRES_DB=pgroonga \
+              --env POSTGRES_PASSWORD=${PGPASSWORD} \
+              --env POSTGRES_USER=pgroonga \
+              --publish 127.0.0.1:5432:5432 \
+              --platform ${platform} \
+              --volume ${PWD}:/host \
+              ${TAG} \
+              postgres \
+              -c max_prepared_transactions=1 \
+              -c search_path=public
+            for i in {1..60}; do
+              if pg_isready -h 127.0.0.1; then
+                break
+              fi
+              sleep 1
+            done
+            if [ $i -eq 60 ]; then
+              echo "PostgreSQL isn't available"
+              exit 1
+            fi
+            echo "::endgroup"
+
+            echo "::group::Test for ${platform}"
+            docker exec pgroonga /host/test/run.sh
+            echo "::endgroup"
+
+            echo "::group::Postpare Docker container"
+            docker exec pgroonga \
+              cp \
+              /var/lib/postgresql/data/pgroonga.log \
+              /host/pgroonga-${platform}.log
+            sudo chown ${USER}: pgroonga-${platform}.log
+            docker kill --signal TERM pgroonga
+            for i in {1..60}; do
+              if ! pg_isready -h 127.0.0.1; then
+                break
+              fi
+              sleep 1
+            done
+            if [ $i -eq 60 ]; then
+              echo "Can't shutdown PostgreSQL"
+              exit 1
+            fi
+            echo "::endgroup"
+          done
       - name: Collect logs
         if: always()
         run: |
-          docker exec pgroonga cp /var/lib/postgresql/data/pgroonga.log /host/
-          sudo chown ${USER}: pgroonga.log
+          docker exec pgroonga cp /var/lib/postgresql/data/pgroonga.log /host/ || :
+          sudo chown ${USER}: pgroonga.log || :
       - name: Upload logs
         if: always()
         uses: actions/upload-artifact@v3
@@ -156,6 +193,7 @@ jobs:
         with:
           context: .
           file: ${{ env.DOCKERFILE }}
+          platforms: ${{ env.PLATFORMS }}
           push: true
           tags: ${{ env.TAGS }}
       - name: Image info
