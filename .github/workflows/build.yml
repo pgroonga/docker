@@ -157,7 +157,7 @@ jobs:
             docker exec pgroonga \
               cp \
               /var/lib/postgresql/data/pgroonga.log \
-              /host/pgroonga-${platform}.log
+              /host/pgroonga-$(echo ${platform} | cut -d/ -f2).log
             sudo chown ${USER}: pgroonga-${platform}.log
             docker kill --signal TERM pgroonga
             for i in {1..60}; do
