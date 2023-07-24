@@ -82,11 +82,8 @@ jobs:
         id: buildx
       - uses: docker/build-push-action@v4
         with:
-          # cache-from: type=gha
-          # cache-to: type=gha,mode=max
           context: .
           file: ${{ env.DOCKERFILE }}
-          load: true
           platforms: ${{ env.PLATFORMS }}
           tags: ${{ env.TAGS }}
       - uses: actions/checkout@v3
