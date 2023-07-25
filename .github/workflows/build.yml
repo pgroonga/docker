@@ -154,11 +154,12 @@ jobs:
             echo "::endgroup"
 
             echo "::group::Postpare Docker container"
+            log_path=pgroonga-$(echo ${platform} | cut -d/ -f2).log
             docker exec pgroonga \
               cp \
               /var/lib/postgresql/data/pgroonga.log \
-              /host/pgroonga-$(echo ${platform} | cut -d/ -f2).log
-            sudo chown ${USER}: pgroonga-${platform}.log
+              /host/${log_path}
+            sudo chown ${USER}: ${log_path}
             docker kill --signal TERM pgroonga
             for i in {1..60}; do
               if ! pg_isready -h 127.0.0.1; then
