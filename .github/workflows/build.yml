@@ -162,7 +162,7 @@ jobs:
             sudo chown ${USER}: ${log_path}
             docker kill --signal TERM pgroonga
             for i in {1..60}; do
-              if ! pg_isready -h 127.0.0.1; then
+              if $(docker ps --filter id=pgroonga | wc -l) -eq 1 ; then
                 break
               fi
               sleep 1
@@ -171,7 +171,7 @@ jobs:
               echo "Can't shutdown PostgreSQL"
               exit 1
             fi
-            docker rm pgroonga
+            docker rm --force pgroonga
             echo "::endgroup"
           done
       - name: Collect logs
