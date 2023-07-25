@@ -171,6 +171,7 @@ jobs:
               echo "Can't shutdown PostgreSQL"
               exit 1
             fi
+            docker rm pgroonga
             echo "::endgroup"
           done
       - name: Collect logs
