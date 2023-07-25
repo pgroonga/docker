@@ -162,7 +162,7 @@ jobs:
             sudo chown ${USER}: ${log_path}
             docker kill --signal TERM pgroonga
             for i in {1..60}; do
-              if $(docker ps --filter id=pgroonga | wc -l) -eq 1 ; then
+              if [ $(docker ps --filter id=pgroonga | wc -l) -eq 1 ]; then
                 break
               fi
               sleep 1
