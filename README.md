@@ -18,10 +18,10 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.1    | 13         | Alpine Linux              | 3.1.1-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][3.1.1-alpine-13-slim] |
 | 3.1.1    | 12         | Alpine Linux              | 3.1.1-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][3.1.1-alpine-12-slim] |
 | 3.1.1    | 11         | Alpine Linux              | 3.1.1-alpine-11-slim, latest-alpine-11-slim | [alpine/11-slim/Dockerfile][3.1.1-alpine-11-slim] |
-| 3.1.1    | 15         | Debian GNU/Linux Bullseye | 3.1.1-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.1.1-debian-15]           |
-| 3.1.1    | 14         | Debian GNU/Linux Bullseye | 3.1.1-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.1.1-debian-14]           |
-| 3.1.1    | 13         | Debian GNU/Linux Bullseye | 3.1.1-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.1.1-debian-13]           |
-| 3.1.1    | 12         | Debian GNU/Linux Bullseye | 3.1.1-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.1.1-debian-12]           |
+| 3.1.1    | 15         | Debian GNU/Linux Bookworm | 3.1.1-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.1.1-debian-15]           |
+| 3.1.1    | 14         | Debian GNU/Linux Bookworm | 3.1.1-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.1.1-debian-14]           |
+| 3.1.1    | 13         | Debian GNU/Linux Bookworm | 3.1.1-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.1.1-debian-13]           |
+| 3.1.1    | 12         | Debian GNU/Linux Bookworm | 3.1.1-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.1.1-debian-12]           |
 | 3.0.9    | 15         | Alpine Linux              | 3.0.9-alpine-15                             | [alpine/15/Dockerfile][3.0.9-alpine-15]           |
 | 3.0.9    | 14         | Alpine Linux              | 3.0.9-alpine-14                             | [alpine/14/Dockerfile][3.0.9-alpine-14]           |
 | 3.0.9    | 13         | Alpine Linux              | 3.0.9-alpine-13                             | [alpine/13/Dockerfile][3.0.9-alpine-13]           |
