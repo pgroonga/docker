@@ -5,6 +5,9 @@ RUN \
   apt update && \
   apt upgrade -y -V && \
   apt install -y -V wget && \
+  wget https://apache.jfrog.io/artifactory/arrow/debian/apache-arrow-apt-source-latest-bookworm.deb && \
+  apt install -y -V ./apache-arrow-apt-source-latest-bookworm.deb && \
+  rm apache-arrow-apt-source-latest-bookworm.deb && \
   wget https://packages.groonga.org/debian/groonga-apt-source-latest-bookworm.deb && \
   apt install -y -V ./groonga-apt-source-latest-bookworm.deb && \
   rm groonga-apt-source-latest-bookworm.deb && \
