@@ -3,7 +3,6 @@ FROM postgres:15-bookworm
 ENV PGROONGA_VERSION=3.1.1-1
 RUN \
   apt update && \
-  apt upgrade -y -V && \
   apt install -y -V wget && \
   wget https://apache.jfrog.io/artifactory/arrow/debian/apache-arrow-apt-source-latest-bookworm.deb && \
   apt install -y -V ./apache-arrow-apt-source-latest-bookworm.deb && \
