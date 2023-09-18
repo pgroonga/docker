@@ -73,7 +73,7 @@ jobs:
           echo "TAGS=${tags}" >> ${GITHUB_ENV}
           echo "VARIANT=${variant}" >> ${GITHUB_ENV}
           echo "VERSION=${version}" >> ${GITHUB_ENV}
-      - uses: docker/login-action@v2
+      - uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
