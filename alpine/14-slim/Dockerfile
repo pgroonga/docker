@@ -9,8 +9,8 @@ RUN \
     msgpack-c-dev \
     zstd-dev
 
-ENV PGROONGA_VERSION=3.1.3 \
-    GROONGA_VERSION=13.0.5
+ENV PGROONGA_VERSION=3.1.5 \
+    GROONGA_VERSION=13.0.8
 
 COPY alpine/build.sh /
 RUN \
