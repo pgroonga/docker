@@ -1,6 +1,7 @@
 FROM postgres:16-bookworm
 
 ENV PGROONGA_VERSION=3.1.5-1
+ENV POSTGRESQL_VERSION=16
 RUN \
   apt update && \
   apt install -y -V wget && \
@@ -12,7 +13,7 @@ RUN \
   rm groonga-apt-source-latest-bookworm.deb && \
   apt update && \
   apt install -y -V \
-    postgresql-15-pgdg-pgroonga=${PGROONGA_VERSION} \
+    postgresql-${POSTGRESQL_VERSION}-pgdg-pgroonga=${PGROONGA_VERSION} \
     groonga-normalizer-mysql \
     groonga-token-filter-stem \
     groonga-tokenizer-mecab && \
