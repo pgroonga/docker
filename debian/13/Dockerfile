@@ -3,13 +3,13 @@ FROM postgres:13-bookworm
 ENV PGROONGA_VERSION=3.1.5-1
 RUN \
   apt update && \
-  apt install -y -V wget && \
-  wget https://apache.jfrog.io/artifactory/arrow/debian/apache-arrow-apt-source-latest-bookworm.deb && \
-  apt install -y -V ./apache-arrow-apt-source-latest-bookworm.deb && \
-  rm apache-arrow-apt-source-latest-bookworm.deb && \
-  wget https://packages.groonga.org/debian/groonga-apt-source-latest-bookworm.deb && \
-  apt install -y -V ./groonga-apt-source-latest-bookworm.deb && \
-  rm groonga-apt-source-latest-bookworm.deb && \
+  apt install -y -V lsb-release wget && \
+  wget https://apache.jfrog.io/artifactory/arrow/debian/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
+  apt install -y -V ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
+  rm apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
+  wget https://packages.groonga.org/debian/groonga-apt-source-latest-$(lsb_release --codename --short).deb && \
+  apt install -y -V ./groonga-apt-source-latest-$(lsb_release --codename --short).deb && \
+  rm groonga-apt-source-latest-$(lsb_release --codename --short).deb && \
   apt update && \
   apt install -y -V \
     postgresql-13-pgdg-pgroonga=${PGROONGA_VERSION} \
