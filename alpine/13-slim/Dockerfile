@@ -2,8 +2,12 @@ FROM postgres:13-alpine
 
 RUN \
   apk --no-cache add \
+    autoconf \
+    automake \
     build-base \
     clang15-dev \
+    gettext-dev \
+    libtool \
     llvm15 \
     lz4-dev \
     msgpack-c-dev \
