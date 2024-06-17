@@ -76,7 +76,7 @@ jobs:
       - uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v3
         id: buildx
-      - uses: docker/build-push-action@v5
+      - uses: docker/build-push-action@v6
         id: build-push
         with:
           context: .
