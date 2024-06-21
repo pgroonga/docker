@@ -37,6 +37,13 @@ make -j$(nproc)
 make install
 cd -
 
+# TODO: Remove this workaround after the new msgpack is released.
+# Workaround for msgpack-c to resolve an issue where a prefix path is not reflected.
+sed -i.bak \
+    -E \
+    -e 's,^(include|lib)dir=,\1dir=${prefix}/,g' \
+    /usr/lib/pkgconfig/msgpack-c.pc
+
 wget https://packages.groonga.org/source/groonga/groonga-${GROONGA_VERSION}.tar.gz
 tar xf groonga-${GROONGA_VERSION}.tar.gz
 cd groonga-${GROONGA_VERSION}
