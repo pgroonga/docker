@@ -2,15 +2,18 @@ FROM postgres:12-alpine
 
 RUN \
   apk --no-cache add \
+    apache-arrow-dev \
     autoconf \
     automake \
     build-base \
     clang15-dev \
+    cmake \
     gettext-dev \
     libtool \
     llvm15 \
     lz4-dev \
     msgpack-c-dev \
+    samurai \
     zstd-dev
 
 ENV PGROONGA_VERSION=3.2.0 \

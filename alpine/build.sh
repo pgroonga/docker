@@ -40,15 +40,13 @@ cd -
 wget https://packages.groonga.org/source/groonga/groonga-${GROONGA_VERSION}.tar.gz
 tar xf groonga-${GROONGA_VERSION}.tar.gz
 cd groonga-${GROONGA_VERSION}
-./configure \
-  --prefix=/usr/local \
-  --disable-groonga-httpd \
-  --disable-document \
-  --disable-glibtest \
-  --disable-benchmark \
-  --enable-mruby
-make -j$(nproc)
-make install
+cmake \
+  -S . \
+  -B ../groonga.build \
+  --preset=release-maximum \
+  -DCMAKE_INSTALL_PREFIX=/usr/local
+cmake --build ../groonga.build
+cmake --install ../groonga.build
 cd -
 
 wget https://packages.groonga.org/source/pgroonga/pgroonga-${PGROONGA_VERSION}.tar.gz
