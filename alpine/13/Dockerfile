@@ -14,7 +14,7 @@ RUN \
     zstd-dev
 
 ENV PGROONGA_VERSION=3.2.0 \
-    GROONGA_VERSION=14.0.2
+    GROONGA_VERSION=14.0.4
 
 COPY alpine/build.sh /
 RUN \
