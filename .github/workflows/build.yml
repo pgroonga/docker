@@ -74,7 +74,7 @@ jobs:
           if [[ "${GITHUB_EVENT_NAME}" = "push" && \
                 "${GITHUB_REPOSITORY}" = "pgroonga/docker && \
                 ("${GITHUB_REF_NAME}" = "main" || \
-                 "${GITHUB_REF_TYPE}" = "tag") ]; then
+                 "${GITHUB_REF_TYPE}" = "tag") ]]; then
             NEED_PUSH=yes
           fi
           echo "NEED_PUSH=${NEED_PUSH}" >> ${GITHUB_ENV}
