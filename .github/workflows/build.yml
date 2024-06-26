@@ -72,7 +72,7 @@ jobs:
 
           NEED_PUSH=no
           if [[ "${GITHUB_EVENT_NAME}" = "push" && \
-                "${GITHUB_REPOSITORY}" = "pgroonga/docker && \
+                "${GITHUB_REPOSITORY}" = "pgroonga/docker" && \
                 ("${GITHUB_REF_NAME}" = "main" || \
                  "${GITHUB_REF_TYPE}" = "tag") ]]; then
             NEED_PUSH=yes
