@@ -69,7 +69,17 @@ jobs:
           echo "TAGS=${tags}" >> ${GITHUB_ENV}
           echo "VARIANT=${variant}" >> ${GITHUB_ENV}
           echo "VERSION=${version}" >> ${GITHUB_ENV}
+
+          NEED_PUSH=no
+          if [[ "${GITHUB_EVENT_NAME}" = "push" && \
+                "${GITHUB_REPOSITORY}" = "pgroonga/docker && \
+                ("${GITHUB_REF_NAME}" = "main" || \
+                 "${GITHUB_REF_TYPE}" = "tag") ]; then
+            NEED_PUSH=yes
+          fi
+          echo "NEED_PUSH=${NEED_PUSH}" >> ${GITHUB_ENV}
       - uses: docker/login-action@v3
+        if: env.NEED_PUSH == 'yes'
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
@@ -82,9 +92,10 @@ jobs:
           context: .
           file: ${{ env.DOCKERFILE }}
           platforms: ${{ env.PLATFORMS }}
-          push: true
+          push: ${{ env.NEED_PUSH == 'yes' }}
           tags: ${{ env.TAGS }}
       - name: Image info
+        if: env.NEED_PUSH == 'yes'
         run: |
           echo "ref: ${GITHUB_REF}"
           echo "tags: ${TAGS}"
