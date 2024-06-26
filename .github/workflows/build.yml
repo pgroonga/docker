@@ -56,7 +56,7 @@ jobs:
           esac
           tag="groonga/pgroonga:${version}-${{ matrix.id }}"
           tags="${tag}"
-          if [ ${{ matrix.id }} = "alpine-15" -a "${version}" = "latest" ]; then
+          if [ ${{ matrix.id }} = "alpine-16" -a "${version}" = "latest" ]; then
             tags="${tags},groonga/pgroonga:latest"
           fi
           platforms="linux/amd64,linux/arm64"
