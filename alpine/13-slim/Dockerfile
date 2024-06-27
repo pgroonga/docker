@@ -29,12 +29,12 @@ RUN \
   apk del .build-dependencies && \
   apk add --no-cache \
     libarrow \
-    msgpack-c \
     libxxhash \
+    msgpack-c \
     zlib \
     zstd && \
   rm -rf \
     /usr/local/include \
-    /usr/local/share/man \
+    /usr/local/lib/mecab/dic/naist-jdic/naist-jdic.csv \
     /usr/local/share/groonga/html \
-    /usr/local/lib/mecab/dic/naist-jdic/naist-jdic.csv
+    /usr/local/share/man

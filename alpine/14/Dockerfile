@@ -29,7 +29,7 @@ RUN \
   apk del .build-dependencies && \
   apk add --no-cache \
     libarrow \
-    msgpack-c \
     libxxhash \
+    msgpack-c \
     zlib \
     zstd
