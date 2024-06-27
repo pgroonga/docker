@@ -1,4 +1,4 @@
-FROM postgres:14-alpine
+FROM postgres:15-alpine
 
 ENV PGROONGA_VERSION=3.2.0 \
     GROONGA_VERSION=14.0.4
