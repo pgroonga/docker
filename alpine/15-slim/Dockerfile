@@ -1,40 +1,40 @@
 FROM postgres:15-alpine
 
-RUN \
-  apk --no-cache add \
-    autoconf \
-    automake \
-    build-base \
-    clang15-dev \
-    gettext-dev \
-    libtool \
-    llvm15 \
-    lz4-dev \
-    msgpack-c-dev \
-    zstd-dev
-
 ENV PGROONGA_VERSION=3.2.0 \
     GROONGA_VERSION=14.0.4
 
 COPY alpine/build.sh /
 RUN \
+  apk add --no-cache --virtual=.build-dependencies \
+    apache-arrow-dev \
+    autoconf \
+    automake \
+    build-base \
+    clang15-dev \
+    cmake \
+    gettext-dev \
+    libtool \
+    linux-headers \
+    llvm15 \
+    lz4-dev \
+    msgpack-c-dev \
+    rapidjson-dev \
+    samurai \
+    xsimd-dev \
+    xxhash-dev \
+    zlib-dev \
+    zstd-dev && \
   /build.sh ${PGROONGA_VERSION} ${GROONGA_VERSION} && \
-  rm -f build.sh
-
-FROM postgres:15-alpine
-
-# copy thirdpart lib files
-COPY --from=0 /usr/lib/libmsgpack-c.so.? /usr/lib/
-COPY --from=0 /usr/lib/liblz4.so.? /usr/lib/
-COPY --from=0 /usr/lib/libzstd.so.? /usr/lib/
-# copy MeCab files
-COPY --from=0 /usr/local/etc/mecabrc /usr/local/etc/
-COPY --from=0 /usr/local/lib/libmecab.so.? /usr/local/lib/
-COPY --from=0 /usr/local/lib/mecab/ /usr/local/lib/mecab/
-# copy Groonga lib files
-COPY --from=0 /usr/local/etc/groonga/ /usr/local/etc/groonga/
-COPY --from=0 /usr/local/lib/groonga/ /usr/local/lib/groonga/
-COPY --from=0 /usr/local/lib/libgroonga.so.? /usr/local/lib/
-# copy PGroonga extension files
-COPY --from=0 /usr/local/lib/postgresql/pgroonga*.so /usr/local/lib/postgresql/
-COPY --from=0 /usr/local/share/postgresql/extension/pgroonga* /usr/local/share/postgresql/extension/
+  rm -f build.sh && \
+  apk del .build-dependencies && \
+  apk add --no-cache \
+    libarrow \
+    msgpack-c \
+    libxxhash \
+    zlib \
+    zstd && \
+  rm -rf \
+    /usr/local/include \
+    /usr/local/share/man \
+    /usr/local/share/groonga/html \
+    /usr/local/lib/mecab/dic/naist-jdic/naist-jdic.csv
