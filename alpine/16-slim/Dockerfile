@@ -18,7 +18,9 @@ RUN \
     llvm15 \
     lz4-dev \
     msgpack-c-dev \
+    patch \
     rapidjson-dev \
+    ruby \
     samurai \
     xsimd-dev \
     xxhash-dev \
