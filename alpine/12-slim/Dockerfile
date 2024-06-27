@@ -32,4 +32,9 @@ RUN \
     msgpack-c \
     libxxhash \
     zlib \
-    zstd
+    zstd && \
+  rm -rf \
+    /usr/local/include \
+    /usr/local/share/man/man.1 \
+    /usr/local/share/groonga/html \
+    /usr/local/lib/mecab/dic/naist-jdic/naist-jdic.csv
