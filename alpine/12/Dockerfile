@@ -7,18 +7,16 @@ COPY alpine/build.sh /
 RUN \
   apk add --no-cache --virtual=.build-dependencies \
     apache-arrow-dev \
-    autoconf \
-    automake \
     build-base \
     clang15-dev \
     cmake \
     gettext-dev \
-    libtool \
     linux-headers \
     llvm15 \
     lz4-dev \
     msgpack-c-dev \
     rapidjson-dev \
+    ruby \
     samurai \
     xsimd-dev \
     xxhash-dev \
