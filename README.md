@@ -8,21 +8,36 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution              | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------- | ------------------------------------------- | ------------------------------------------------- |
-| 3.2.2    | 16         | Alpine Linux              | 3.2.2-alpine-16, latest-alpine-16, latest   | [alpine/16/Dockerfile][3.2.2-alpine-16]           |
-| 3.2.2    | 15         | Alpine Linux              | 3.2.2-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][3.2.2-alpine-15]           |
-| 3.2.2    | 14         | Alpine Linux              | 3.2.2-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][3.2.2-alpine-14]           |
-| 3.2.2    | 13         | Alpine Linux              | 3.2.2-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][3.2.2-alpine-13]           |
-| 3.2.2    | 12         | Alpine Linux              | 3.2.2-alpine-12, latest-alpine-12           | [alpine/12/Dockerfile][3.2.2-alpine-12]           |
-| 3.2.2    | 16         | Alpine Linux              | 3.2.2-alpine-16-slim, latest-alpine-16-slim | [alpine/16-slim/Dockerfile][3.2.2-alpine-16-slim] |
-| 3.2.2    | 15         | Alpine Linux              | 3.2.2-alpine-15-slim, latest-alpine-15-slim | [alpine/15-slim/Dockerfile][3.2.2-alpine-15-slim] |
-| 3.2.2    | 14         | Alpine Linux              | 3.2.2-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][3.2.2-alpine-14-slim] |
-| 3.2.2    | 13         | Alpine Linux              | 3.2.2-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][3.2.2-alpine-13-slim] |
-| 3.2.2    | 12         | Alpine Linux              | 3.2.2-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][3.2.2-alpine-12-slim] |
-| 3.2.2    | 16         | Debian GNU/Linux Bullseye | 3.2.2-debian-16, latest-debian-16           | [debian/16/Dockerfile][3.2.2-debian-16]           |
-| 3.2.2    | 15         | Debian GNU/Linux Bullseye | 3.2.2-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.2.2-debian-15]           |
-| 3.2.2    | 14         | Debian GNU/Linux Bullseye | 3.2.2-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.2.2-debian-14]           |
-| 3.2.2    | 13         | Debian GNU/Linux Bullseye | 3.2.2-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.2.2-debian-13]           |
-| 3.2.2    | 12         | Debian GNU/Linux Bullseye | 3.2.2-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.2.2-debian-12]           |
+| 3.2.3    | 16         | Alpine Linux              | 3.2.3-alpine-16, latest-alpine-16, latest   | [alpine/16/Dockerfile][3.2.3-alpine-16]           |
+| 3.2.3    | 15         | Alpine Linux              | 3.2.3-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][3.2.3-alpine-15]           |
+| 3.2.3    | 14         | Alpine Linux              | 3.2.3-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][3.2.3-alpine-14]           |
+| 3.2.3    | 13         | Alpine Linux              | 3.2.3-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][3.2.3-alpine-13]           |
+| 3.2.3    | 12         | Alpine Linux              | 3.2.3-alpine-12, latest-alpine-12           | [alpine/12/Dockerfile][3.2.3-alpine-12]           |
+| 3.2.3    | 16         | Alpine Linux              | 3.2.3-alpine-16-slim, latest-alpine-16-slim | [alpine/16-slim/Dockerfile][3.2.3-alpine-16-slim] |
+| 3.2.3    | 15         | Alpine Linux              | 3.2.3-alpine-15-slim, latest-alpine-15-slim | [alpine/15-slim/Dockerfile][3.2.3-alpine-15-slim] |
+| 3.2.3    | 14         | Alpine Linux              | 3.2.3-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][3.2.3-alpine-14-slim] |
+| 3.2.3    | 13         | Alpine Linux              | 3.2.3-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][3.2.3-alpine-13-slim] |
+| 3.2.3    | 12         | Alpine Linux              | 3.2.3-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][3.2.3-alpine-12-slim] |
+| 3.2.3    | 16         | Debian GNU/Linux Bullseye | 3.2.3-debian-16, latest-debian-16           | [debian/16/Dockerfile][3.2.3-debian-16]           |
+| 3.2.3    | 15         | Debian GNU/Linux Bullseye | 3.2.3-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.2.3-debian-15]           |
+| 3.2.3    | 14         | Debian GNU/Linux Bullseye | 3.2.3-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.2.3-debian-14]           |
+| 3.2.3    | 13         | Debian GNU/Linux Bullseye | 3.2.3-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.2.3-debian-13]           |
+| 3.2.3    | 12         | Debian GNU/Linux Bullseye | 3.2.3-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.2.3-debian-12]           |
+| 3.2.2    | 16         | Alpine Linux              | 3.2.2-alpine-16                             | [alpine/16/Dockerfile][3.2.2-alpine-16]           |
+| 3.2.2    | 15         | Alpine Linux              | 3.2.2-alpine-15                             | [alpine/15/Dockerfile][3.2.2-alpine-15]           |
+| 3.2.2    | 14         | Alpine Linux              | 3.2.2-alpine-14                             | [alpine/14/Dockerfile][3.2.2-alpine-14]           |
+| 3.2.2    | 13         | Alpine Linux              | 3.2.2-alpine-13                             | [alpine/13/Dockerfile][3.2.2-alpine-13]           |
+| 3.2.2    | 12         | Alpine Linux              | 3.2.2-alpine-12                             | [alpine/12/Dockerfile][3.2.2-alpine-12]           |
+| 3.2.2    | 16         | Alpine Linux              | 3.2.2-alpine-16-slim                        | [alpine/16-slim/Dockerfile][3.2.2-alpine-16-slim] |
+| 3.2.2    | 15         | Alpine Linux              | 3.2.2-alpine-15-slim                        | [alpine/15-slim/Dockerfile][3.2.2-alpine-15-slim] |
+| 3.2.2    | 14         | Alpine Linux              | 3.2.2-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.2.2-alpine-14-slim] |
+| 3.2.2    | 13         | Alpine Linux              | 3.2.2-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.2.2-alpine-13-slim] |
+| 3.2.2    | 12         | Alpine Linux              | 3.2.2-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.2.2-alpine-12-slim] |
+| 3.2.2    | 16         | Debian GNU/Linux Bullseye | 3.2.2-debian-16                             | [debian/16/Dockerfile][3.2.2-debian-16]           |
+| 3.2.2    | 15         | Debian GNU/Linux Bullseye | 3.2.2-debian-15                             | [debian/15/Dockerfile][3.2.2-debian-15]           |
+| 3.2.2    | 14         | Debian GNU/Linux Bullseye | 3.2.2-debian-14                             | [debian/14/Dockerfile][3.2.2-debian-14]           |
+| 3.2.2    | 13         | Debian GNU/Linux Bullseye | 3.2.2-debian-13                             | [debian/13/Dockerfile][3.2.2-debian-13]           |
+| 3.2.2    | 12         | Debian GNU/Linux Bullseye | 3.2.2-debian-12                             | [debian/12/Dockerfile][3.2.2-debian-12]           |
 | 3.2.1    | 16         | Alpine Linux              | 3.2.1-alpine-16                             | [alpine/16/Dockerfile][3.2.1-alpine-16]           |
 | 3.2.1    | 15         | Alpine Linux              | 3.2.1-alpine-15                             | [alpine/15/Dockerfile][3.2.1-alpine-15]           |
 | 3.2.1    | 14         | Alpine Linux              | 3.2.1-alpine-14                             | [alpine/14/Dockerfile][3.2.1-alpine-14]           |
@@ -584,6 +599,21 @@ create extension pgroonga;
 
 please take a look at [PGroonga website](https://pgroonga.github.io/) for details
 
+[3.2.3-alpine-16]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/16/Dockerfile
+[3.2.3-alpine-15]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/15/Dockerfile
+[3.2.3-alpine-14]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/14/Dockerfile
+[3.2.3-alpine-13]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/13/Dockerfile
+[3.2.3-alpine-12]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/12/Dockerfile
+[3.2.3-alpine-16-slim]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/16-slim/Dockerfile
+[3.2.3-alpine-15-slim]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/15-slim/Dockerfile
+[3.2.3-alpine-14-slim]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/14-slim/Dockerfile
+[3.2.3-alpine-13-slim]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/13-slim/Dockerfile
+[3.2.3-alpine-12-slim]: https://github.com/pgroonga/docker/tree/3.2.3/alpine/12-slim/Dockerfile
+[3.2.3-debian-16]: https://github.com/pgroonga/docker/tree/3.2.3/debian/16/Dockerfile
+[3.2.3-debian-15]: https://github.com/pgroonga/docker/tree/3.2.3/debian/15/Dockerfile
+[3.2.3-debian-14]: https://github.com/pgroonga/docker/tree/3.2.3/debian/14/Dockerfile
+[3.2.3-debian-13]: https://github.com/pgroonga/docker/tree/3.2.3/debian/13/Dockerfile
+[3.2.3-debian-12]: https://github.com/pgroonga/docker/tree/3.2.3/debian/12/Dockerfile
 [3.2.2-alpine-16]: https://github.com/pgroonga/docker/tree/3.2.2/alpine/16/Dockerfile
 [3.2.2-alpine-15]: https://github.com/pgroonga/docker/tree/3.2.2/alpine/15/Dockerfile
 [3.2.2-alpine-14]: https://github.com/pgroonga/docker/tree/3.2.2/alpine/14/Dockerfile
