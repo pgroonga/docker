@@ -79,7 +79,7 @@ jobs:
             # Include linux/arm64 only when pushing.
             # When not pushing, the image is loaded locally, but this will cause an error
             # if linux/arm64 is included.
-            PLATFORMS="linux/amd64,linux/arm64"
+            PLATFORMS+=",linux/arm64"
           fi
           echo "NEED_PUSH=${NEED_PUSH}" >> ${GITHUB_ENV}
           echo "PLATFORMS=${PLATFORMS}" >> ${GITHUB_ENV}
