@@ -23,6 +23,7 @@ jobs:
           - "alpine-14"
           - "alpine-13"
           - "alpine-12"
+          - "alpine-17-slim"
           - "alpine-16-slim"
           - "alpine-15-slim"
           - "alpine-14-slim"
