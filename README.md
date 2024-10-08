@@ -20,12 +20,12 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.2.4    | 14         | Alpine Linux              | 3.2.4-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][3.2.4-alpine-14-slim] |
 | 3.2.4    | 13         | Alpine Linux              | 3.2.4-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][3.2.4-alpine-13-slim] |
 | 3.2.4    | 12         | Alpine Linux              | 3.2.4-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][3.2.4-alpine-12-slim] |
-| 3.2.4    | 17         | Debian GNU/Linux Bullseye | 3.2.4-debian-17, latest-debian-17           | [debian/17/Dockerfile][3.2.4-debian-17]           |
-| 3.2.4    | 16         | Debian GNU/Linux Bullseye | 3.2.4-debian-16, latest-debian-16           | [debian/16/Dockerfile][3.2.4-debian-16]           |
-| 3.2.4    | 15         | Debian GNU/Linux Bullseye | 3.2.4-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.2.4-debian-15]           |
-| 3.2.4    | 14         | Debian GNU/Linux Bullseye | 3.2.4-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.2.4-debian-14]           |
-| 3.2.4    | 13         | Debian GNU/Linux Bullseye | 3.2.4-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.2.4-debian-13]           |
-| 3.2.4    | 12         | Debian GNU/Linux Bullseye | 3.2.4-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.2.4-debian-12]           |
+| 3.2.4    | 17         | Debian GNU/Linux Bookworm | 3.2.4-debian-17, latest-debian-17           | [debian/17/Dockerfile][3.2.4-debian-17]           |
+| 3.2.4    | 16         | Debian GNU/Linux Bookworm | 3.2.4-debian-16, latest-debian-16           | [debian/16/Dockerfile][3.2.4-debian-16]           |
+| 3.2.4    | 15         | Debian GNU/Linux Bookworm | 3.2.4-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.2.4-debian-15]           |
+| 3.2.4    | 14         | Debian GNU/Linux Bookworm | 3.2.4-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.2.4-debian-14]           |
+| 3.2.4    | 13         | Debian GNU/Linux Bookworm | 3.2.4-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.2.4-debian-13]           |
+| 3.2.4    | 12         | Debian GNU/Linux Bookworm | 3.2.4-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.2.4-debian-12]           |
 | 3.2.3    | 16         | Alpine Linux              | 3.2.3-alpine-16                             | [alpine/16/Dockerfile][3.2.3-alpine-16]           |
 | 3.2.3    | 15         | Alpine Linux              | 3.2.3-alpine-15                             | [alpine/15/Dockerfile][3.2.3-alpine-15]           |
 | 3.2.3    | 14         | Alpine Linux              | 3.2.3-alpine-14                             | [alpine/14/Dockerfile][3.2.3-alpine-14]           |
@@ -36,11 +36,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.2.3    | 14         | Alpine Linux              | 3.2.3-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.2.3-alpine-14-slim] |
 | 3.2.3    | 13         | Alpine Linux              | 3.2.3-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.2.3-alpine-13-slim] |
 | 3.2.3    | 12         | Alpine Linux              | 3.2.3-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.2.3-alpine-12-slim] |
-| 3.2.3    | 16         | Debian GNU/Linux Bullseye | 3.2.3-debian-16                             | [debian/16/Dockerfile][3.2.3-debian-16]           |
-| 3.2.3    | 15         | Debian GNU/Linux Bullseye | 3.2.3-debian-15                             | [debian/15/Dockerfile][3.2.3-debian-15]           |
-| 3.2.3    | 14         | Debian GNU/Linux Bullseye | 3.2.3-debian-14                             | [debian/14/Dockerfile][3.2.3-debian-14]           |
-| 3.2.3    | 13         | Debian GNU/Linux Bullseye | 3.2.3-debian-13                             | [debian/13/Dockerfile][3.2.3-debian-13]           |
-| 3.2.3    | 12         | Debian GNU/Linux Bullseye | 3.2.3-debian-12                             | [debian/12/Dockerfile][3.2.3-debian-12]           |
+| 3.2.3    | 16         | Debian GNU/Linux Bookworm | 3.2.3-debian-16                             | [debian/16/Dockerfile][3.2.3-debian-16]           |
+| 3.2.3    | 15         | Debian GNU/Linux Bookworm | 3.2.3-debian-15                             | [debian/15/Dockerfile][3.2.3-debian-15]           |
+| 3.2.3    | 14         | Debian GNU/Linux Bookworm | 3.2.3-debian-14                             | [debian/14/Dockerfile][3.2.3-debian-14]           |
+| 3.2.3    | 13         | Debian GNU/Linux Bookworm | 3.2.3-debian-13                             | [debian/13/Dockerfile][3.2.3-debian-13]           |
+| 3.2.3    | 12         | Debian GNU/Linux Bookworm | 3.2.3-debian-12                             | [debian/12/Dockerfile][3.2.3-debian-12]           |
 | 3.2.2    | 16         | Alpine Linux              | 3.2.2-alpine-16                             | [alpine/16/Dockerfile][3.2.2-alpine-16]           |
 | 3.2.2    | 15         | Alpine Linux              | 3.2.2-alpine-15                             | [alpine/15/Dockerfile][3.2.2-alpine-15]           |
 | 3.2.2    | 14         | Alpine Linux              | 3.2.2-alpine-14                             | [alpine/14/Dockerfile][3.2.2-alpine-14]           |
@@ -51,11 +51,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.2.2    | 14         | Alpine Linux              | 3.2.2-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.2.2-alpine-14-slim] |
 | 3.2.2    | 13         | Alpine Linux              | 3.2.2-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.2.2-alpine-13-slim] |
 | 3.2.2    | 12         | Alpine Linux              | 3.2.2-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.2.2-alpine-12-slim] |
-| 3.2.2    | 16         | Debian GNU/Linux Bullseye | 3.2.2-debian-16                             | [debian/16/Dockerfile][3.2.2-debian-16]           |
-| 3.2.2    | 15         | Debian GNU/Linux Bullseye | 3.2.2-debian-15                             | [debian/15/Dockerfile][3.2.2-debian-15]           |
-| 3.2.2    | 14         | Debian GNU/Linux Bullseye | 3.2.2-debian-14                             | [debian/14/Dockerfile][3.2.2-debian-14]           |
-| 3.2.2    | 13         | Debian GNU/Linux Bullseye | 3.2.2-debian-13                             | [debian/13/Dockerfile][3.2.2-debian-13]           |
-| 3.2.2    | 12         | Debian GNU/Linux Bullseye | 3.2.2-debian-12                             | [debian/12/Dockerfile][3.2.2-debian-12]           |
+| 3.2.2    | 16         | Debian GNU/Linux Bookworm | 3.2.2-debian-16                             | [debian/16/Dockerfile][3.2.2-debian-16]           |
+| 3.2.2    | 15         | Debian GNU/Linux Bookworm | 3.2.2-debian-15                             | [debian/15/Dockerfile][3.2.2-debian-15]           |
+| 3.2.2    | 14         | Debian GNU/Linux Bookworm | 3.2.2-debian-14                             | [debian/14/Dockerfile][3.2.2-debian-14]           |
+| 3.2.2    | 13         | Debian GNU/Linux Bookworm | 3.2.2-debian-13                             | [debian/13/Dockerfile][3.2.2-debian-13]           |
+| 3.2.2    | 12         | Debian GNU/Linux Bookworm | 3.2.2-debian-12                             | [debian/12/Dockerfile][3.2.2-debian-12]           |
 | 3.2.1    | 16         | Alpine Linux              | 3.2.1-alpine-16                             | [alpine/16/Dockerfile][3.2.1-alpine-16]           |
 | 3.2.1    | 15         | Alpine Linux              | 3.2.1-alpine-15                             | [alpine/15/Dockerfile][3.2.1-alpine-15]           |
 | 3.2.1    | 14         | Alpine Linux              | 3.2.1-alpine-14                             | [alpine/14/Dockerfile][3.2.1-alpine-14]           |
@@ -66,11 +66,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.2.1    | 14         | Alpine Linux              | 3.2.1-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.2.1-alpine-14-slim] |
 | 3.2.1    | 13         | Alpine Linux              | 3.2.1-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.2.1-alpine-13-slim] |
 | 3.2.1    | 12         | Alpine Linux              | 3.2.1-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.2.1-alpine-12-slim] |
-| 3.2.1    | 16         | Debian GNU/Linux Bullseye | 3.2.1-debian-16                             | [debian/16/Dockerfile][3.2.1-debian-16]           |
-| 3.2.1    | 15         | Debian GNU/Linux Bullseye | 3.2.1-debian-15                             | [debian/15/Dockerfile][3.2.1-debian-15]           |
-| 3.2.1    | 14         | Debian GNU/Linux Bullseye | 3.2.1-debian-14                             | [debian/14/Dockerfile][3.2.1-debian-14]           |
-| 3.2.1    | 13         | Debian GNU/Linux Bullseye | 3.2.1-debian-13                             | [debian/13/Dockerfile][3.2.1-debian-13]           |
-| 3.2.1    | 12         | Debian GNU/Linux Bullseye | 3.2.1-debian-12                             | [debian/12/Dockerfile][3.2.1-debian-12]           |
+| 3.2.1    | 16         | Debian GNU/Linux Bookworm | 3.2.1-debian-16                             | [debian/16/Dockerfile][3.2.1-debian-16]           |
+| 3.2.1    | 15         | Debian GNU/Linux Bookworm | 3.2.1-debian-15                             | [debian/15/Dockerfile][3.2.1-debian-15]           |
+| 3.2.1    | 14         | Debian GNU/Linux Bookworm | 3.2.1-debian-14                             | [debian/14/Dockerfile][3.2.1-debian-14]           |
+| 3.2.1    | 13         | Debian GNU/Linux Bookworm | 3.2.1-debian-13                             | [debian/13/Dockerfile][3.2.1-debian-13]           |
+| 3.2.1    | 12         | Debian GNU/Linux Bookworm | 3.2.1-debian-12                             | [debian/12/Dockerfile][3.2.1-debian-12]           |
 | 3.2.0    | 16         | Alpine Linux              | 3.2.0-alpine-16                             | [alpine/16/Dockerfile][3.2.0-alpine-16]           |
 | 3.2.0    | 15         | Alpine Linux              | 3.2.0-alpine-15                             | [alpine/15/Dockerfile][3.2.0-alpine-15]           |
 | 3.2.0    | 14         | Alpine Linux              | 3.2.0-alpine-14                             | [alpine/14/Dockerfile][3.2.0-alpine-14]           |
@@ -81,11 +81,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.2.0    | 14         | Alpine Linux              | 3.2.0-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.2.0-alpine-14-slim] |
 | 3.2.0    | 13         | Alpine Linux              | 3.2.0-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.2.0-alpine-13-slim] |
 | 3.2.0    | 12         | Alpine Linux              | 3.2.0-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.2.0-alpine-12-slim] |
-| 3.2.0    | 16         | Debian GNU/Linux Bullseye | 3.2.0-debian-16                             | [debian/16/Dockerfile][3.2.0-debian-16]           |
-| 3.2.0    | 15         | Debian GNU/Linux Bullseye | 3.2.0-debian-15                             | [debian/15/Dockerfile][3.2.0-debian-15]           |
-| 3.2.0    | 14         | Debian GNU/Linux Bullseye | 3.2.0-debian-14                             | [debian/14/Dockerfile][3.2.0-debian-14]           |
-| 3.2.0    | 13         | Debian GNU/Linux Bullseye | 3.2.0-debian-13                             | [debian/13/Dockerfile][3.2.0-debian-13]           |
-| 3.2.0    | 12         | Debian GNU/Linux Bullseye | 3.2.0-debian-12                             | [debian/12/Dockerfile][3.2.0-debian-12]           |
+| 3.2.0    | 16         | Debian GNU/Linux Bookworm | 3.2.0-debian-16                             | [debian/16/Dockerfile][3.2.0-debian-16]           |
+| 3.2.0    | 15         | Debian GNU/Linux Bookworm | 3.2.0-debian-15                             | [debian/15/Dockerfile][3.2.0-debian-15]           |
+| 3.2.0    | 14         | Debian GNU/Linux Bookworm | 3.2.0-debian-14                             | [debian/14/Dockerfile][3.2.0-debian-14]           |
+| 3.2.0    | 13         | Debian GNU/Linux Bookworm | 3.2.0-debian-13                             | [debian/13/Dockerfile][3.2.0-debian-13]           |
+| 3.2.0    | 12         | Debian GNU/Linux Bookworm | 3.2.0-debian-12                             | [debian/12/Dockerfile][3.2.0-debian-12]           |
 | 3.1.9    | 16         | Alpine Linux              | 3.1.9-alpine-16                             | [alpine/16/Dockerfile][3.1.9-alpine-16]           |
 | 3.1.9    | 15         | Alpine Linux              | 3.1.9-alpine-15                             | [alpine/15/Dockerfile][3.1.9-alpine-15]           |
 | 3.1.9    | 14         | Alpine Linux              | 3.1.9-alpine-14                             | [alpine/14/Dockerfile][3.1.9-alpine-14]           |
@@ -96,11 +96,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.9    | 14         | Alpine Linux              | 3.1.9-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.1.9-alpine-14-slim] |
 | 3.1.9    | 13         | Alpine Linux              | 3.1.9-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.1.9-alpine-13-slim] |
 | 3.1.9    | 12         | Alpine Linux              | 3.1.9-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.9-alpine-12-slim] |
-| 3.1.9    | 16         | Debian GNU/Linux Bullseye | 3.1.9-debian-16                             | [debian/16/Dockerfile][3.1.9-debian-16]           |
-| 3.1.9    | 15         | Debian GNU/Linux Bullseye | 3.1.9-debian-15                             | [debian/15/Dockerfile][3.1.9-debian-15]           |
-| 3.1.9    | 14         | Debian GNU/Linux Bullseye | 3.1.9-debian-14                             | [debian/14/Dockerfile][3.1.9-debian-14]           |
-| 3.1.9    | 13         | Debian GNU/Linux Bullseye | 3.1.9-debian-13                             | [debian/13/Dockerfile][3.1.9-debian-13]           |
-| 3.1.9    | 12         | Debian GNU/Linux Bullseye | 3.1.9-debian-12                             | [debian/12/Dockerfile][3.1.9-debian-12]           |
+| 3.1.9    | 16         | Debian GNU/Linux Bookworm | 3.1.9-debian-16                             | [debian/16/Dockerfile][3.1.9-debian-16]           |
+| 3.1.9    | 15         | Debian GNU/Linux Bookworm | 3.1.9-debian-15                             | [debian/15/Dockerfile][3.1.9-debian-15]           |
+| 3.1.9    | 14         | Debian GNU/Linux Bookworm | 3.1.9-debian-14                             | [debian/14/Dockerfile][3.1.9-debian-14]           |
+| 3.1.9    | 13         | Debian GNU/Linux Bookworm | 3.1.9-debian-13                             | [debian/13/Dockerfile][3.1.9-debian-13]           |
+| 3.1.9    | 12         | Debian GNU/Linux Bookworm | 3.1.9-debian-12                             | [debian/12/Dockerfile][3.1.9-debian-12]           |
 | 3.1.8    | 16         | Alpine Linux              | 3.1.8-alpine-16                             | [alpine/16/Dockerfile][3.1.8-alpine-16]           |
 | 3.1.8    | 15         | Alpine Linux              | 3.1.8-alpine-15                             | [alpine/15/Dockerfile][3.1.8-alpine-15]           |
 | 3.1.8    | 14         | Alpine Linux              | 3.1.8-alpine-14                             | [alpine/14/Dockerfile][3.1.8-alpine-14]           |
@@ -111,11 +111,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.8    | 14         | Alpine Linux              | 3.1.8-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.1.8-alpine-14-slim] |
 | 3.1.8    | 13         | Alpine Linux              | 3.1.8-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.1.8-alpine-13-slim] |
 | 3.1.8    | 12         | Alpine Linux              | 3.1.8-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.8-alpine-12-slim] |
-| 3.1.8    | 16         | Debian GNU/Linux Bullseye | 3.1.8-debian-16                             | [debian/16/Dockerfile][3.1.8-debian-16]           |
-| 3.1.8    | 15         | Debian GNU/Linux Bullseye | 3.1.8-debian-15                             | [debian/15/Dockerfile][3.1.8-debian-15]           |
-| 3.1.8    | 14         | Debian GNU/Linux Bullseye | 3.1.8-debian-14                             | [debian/14/Dockerfile][3.1.8-debian-14]           |
-| 3.1.8    | 13         | Debian GNU/Linux Bullseye | 3.1.8-debian-13                             | [debian/13/Dockerfile][3.1.8-debian-13]           |
-| 3.1.8    | 12         | Debian GNU/Linux Bullseye | 3.1.8-debian-12                             | [debian/12/Dockerfile][3.1.8-debian-12]           |
+| 3.1.8    | 16         | Debian GNU/Linux Bookworm | 3.1.8-debian-16                             | [debian/16/Dockerfile][3.1.8-debian-16]           |
+| 3.1.8    | 15         | Debian GNU/Linux Bookworm | 3.1.8-debian-15                             | [debian/15/Dockerfile][3.1.8-debian-15]           |
+| 3.1.8    | 14         | Debian GNU/Linux Bookworm | 3.1.8-debian-14                             | [debian/14/Dockerfile][3.1.8-debian-14]           |
+| 3.1.8    | 13         | Debian GNU/Linux Bookworm | 3.1.8-debian-13                             | [debian/13/Dockerfile][3.1.8-debian-13]           |
+| 3.1.8    | 12         | Debian GNU/Linux Bookworm | 3.1.8-debian-12                             | [debian/12/Dockerfile][3.1.8-debian-12]           |
 | 3.1.7    | 16         | Alpine Linux              | 3.1.7-alpine-16                             | [alpine/16/Dockerfile][3.1.7-alpine-16]           |
 | 3.1.7    | 15         | Alpine Linux              | 3.1.7-alpine-15                             | [alpine/15/Dockerfile][3.1.7-alpine-15]           |
 | 3.1.7    | 14         | Alpine Linux              | 3.1.7-alpine-14                             | [alpine/14/Dockerfile][3.1.7-alpine-14]           |
@@ -126,11 +126,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.7    | 14         | Alpine Linux              | 3.1.7-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.1.7-alpine-14-slim] |
 | 3.1.7    | 13         | Alpine Linux              | 3.1.7-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.1.7-alpine-13-slim] |
 | 3.1.7    | 12         | Alpine Linux              | 3.1.7-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.7-alpine-12-slim] |
-| 3.1.7    | 16         | Debian GNU/Linux Bullseye | 3.1.7-debian-16                             | [debian/16/Dockerfile][3.1.7-debian-16]           |
-| 3.1.7    | 15         | Debian GNU/Linux Bullseye | 3.1.7-debian-15                             | [debian/15/Dockerfile][3.1.7-debian-15]           |
-| 3.1.7    | 14         | Debian GNU/Linux Bullseye | 3.1.7-debian-14                             | [debian/14/Dockerfile][3.1.7-debian-14]           |
-| 3.1.7    | 13         | Debian GNU/Linux Bullseye | 3.1.7-debian-13                             | [debian/13/Dockerfile][3.1.7-debian-13]           |
-| 3.1.7    | 12         | Debian GNU/Linux Bullseye | 3.1.7-debian-12                             | [debian/12/Dockerfile][3.1.7-debian-12]           |
+| 3.1.7    | 16         | Debian GNU/Linux Bookworm | 3.1.7-debian-16                             | [debian/16/Dockerfile][3.1.7-debian-16]           |
+| 3.1.7    | 15         | Debian GNU/Linux Bookworm | 3.1.7-debian-15                             | [debian/15/Dockerfile][3.1.7-debian-15]           |
+| 3.1.7    | 14         | Debian GNU/Linux Bookworm | 3.1.7-debian-14                             | [debian/14/Dockerfile][3.1.7-debian-14]           |
+| 3.1.7    | 13         | Debian GNU/Linux Bookworm | 3.1.7-debian-13                             | [debian/13/Dockerfile][3.1.7-debian-13]           |
+| 3.1.7    | 12         | Debian GNU/Linux Bookworm | 3.1.7-debian-12                             | [debian/12/Dockerfile][3.1.7-debian-12]           |
 | 3.1.6    | 16         | Alpine Linux              | 3.1.6-alpine-16                             | [alpine/16/Dockerfile][3.1.6-alpine-16]           |
 | 3.1.6    | 15         | Alpine Linux              | 3.1.6-alpine-15                             | [alpine/15/Dockerfile][3.1.6-alpine-15]           |
 | 3.1.6    | 14         | Alpine Linux              | 3.1.6-alpine-14                             | [alpine/14/Dockerfile][3.1.6-alpine-14]           |
@@ -141,11 +141,11 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.6    | 14         | Alpine Linux              | 3.1.6-alpine-14-slim                        | [alpine/14-slim/Dockerfile][3.1.6-alpine-14-slim] |
 | 3.1.6    | 13         | Alpine Linux              | 3.1.6-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.1.6-alpine-13-slim] |
 | 3.1.6    | 12         | Alpine Linux              | 3.1.6-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.6-alpine-12-slim] |
-| 3.1.6    | 16         | Debian GNU/Linux Bullseye | 3.1.6-debian-16                             | [debian/16/Dockerfile][3.1.6-debian-16]           |
-| 3.1.6    | 15         | Debian GNU/Linux Bullseye | 3.1.6-debian-15                             | [debian/15/Dockerfile][3.1.6-debian-15]           |
-| 3.1.6    | 14         | Debian GNU/Linux Bullseye | 3.1.6-debian-14                             | [debian/14/Dockerfile][3.1.6-debian-14]           |
-| 3.1.6    | 13         | Debian GNU/Linux Bullseye | 3.1.6-debian-13                             | [debian/13/Dockerfile][3.1.6-debian-13]           |
-| 3.1.6    | 12         | Debian GNU/Linux Bullseye | 3.1.6-debian-12                             | [debian/12/Dockerfile][3.1.6-debian-12]           |
+| 3.1.6    | 16         | Debian GNU/Linux Bookworm | 3.1.6-debian-16                             | [debian/16/Dockerfile][3.1.6-debian-16]           |
+| 3.1.6    | 15         | Debian GNU/Linux Bookworm | 3.1.6-debian-15                             | [debian/15/Dockerfile][3.1.6-debian-15]           |
+| 3.1.6    | 14         | Debian GNU/Linux Bookworm | 3.1.6-debian-14                             | [debian/14/Dockerfile][3.1.6-debian-14]           |
+| 3.1.6    | 13         | Debian GNU/Linux Bookworm | 3.1.6-debian-13                             | [debian/13/Dockerfile][3.1.6-debian-13]           |
+| 3.1.6    | 12         | Debian GNU/Linux Bookworm | 3.1.6-debian-12                             | [debian/12/Dockerfile][3.1.6-debian-12]           |
 | 3.1.5    | 16         | Alpine Linux              | 3.1.5-alpine-16                             | [alpine/16/Dockerfile][3.1.5-alpine-16]           |
 | 3.1.5    | 15         | Alpine Linux              | 3.1.5-alpine-15                             | [alpine/15/Dockerfile][3.1.5-alpine-15]           |
 | 3.1.5    | 14         | Alpine Linux              | 3.1.5-alpine-14                             | [alpine/14/Dockerfile][3.1.5-alpine-14]           |
@@ -159,10 +159,10 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.5    | 12         | Alpine Linux              | 3.1.5-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.5-alpine-12-slim] |
 | 3.1.5    | 11         | Alpine Linux              | 3.1.5-alpine-11-slim                        | [alpine/11-slim/Dockerfile][3.1.5-alpine-11-slim] |
 | 3.1.5    | 16         | Debian GNU/Linux Bookworm | 3.1.5-debian-16                             | [debian/16/Dockerfile][3.1.5-debian-16]           |
-| 3.1.5    | 15         | Debian GNU/Linux Bullseye | 3.1.5-debian-15                             | [debian/15/Dockerfile][3.1.5-debian-15]           |
-| 3.1.5    | 14         | Debian GNU/Linux Bullseye | 3.1.5-debian-14                             | [debian/14/Dockerfile][3.1.5-debian-14]           |
-| 3.1.5    | 13         | Debian GNU/Linux Bullseye | 3.1.5-debian-13                             | [debian/13/Dockerfile][3.1.5-debian-13]           |
-| 3.1.5    | 12         | Debian GNU/Linux Bullseye | 3.1.5-debian-12                             | [debian/12/Dockerfile][3.1.5-debian-12]           |
+| 3.1.5    | 15         | Debian GNU/Linux Bookworm | 3.1.5-debian-15                             | [debian/15/Dockerfile][3.1.5-debian-15]           |
+| 3.1.5    | 14         | Debian GNU/Linux Bookworm | 3.1.5-debian-14                             | [debian/14/Dockerfile][3.1.5-debian-14]           |
+| 3.1.5    | 13         | Debian GNU/Linux Bookworm | 3.1.5-debian-13                             | [debian/13/Dockerfile][3.1.5-debian-13]           |
+| 3.1.5    | 12         | Debian GNU/Linux Bookworm | 3.1.5-debian-12                             | [debian/12/Dockerfile][3.1.5-debian-12]           |
 | 3.1.3    | 15         | Alpine Linux              | 3.1.3-alpine-15                             | [alpine/15/Dockerfile][3.1.3-alpine-15]           |
 | 3.1.3    | 14         | Alpine Linux              | 3.1.3-alpine-14                             | [alpine/14/Dockerfile][3.1.3-alpine-14]           |
 | 3.1.3    | 13         | Alpine Linux              | 3.1.3-alpine-13                             | [alpine/13/Dockerfile][3.1.3-alpine-13]           |
@@ -173,10 +173,10 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.3    | 13         | Alpine Linux              | 3.1.3-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.1.3-alpine-13-slim] |
 | 3.1.3    | 12         | Alpine Linux              | 3.1.3-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.3-alpine-12-slim] |
 | 3.1.3    | 11         | Alpine Linux              | 3.1.3-alpine-11-slim                        | [alpine/11-slim/Dockerfile][3.1.3-alpine-11-slim] |
-| 3.1.3    | 15         | Debian GNU/Linux Bullseye | 3.1.3-debian-15                             | [debian/15/Dockerfile][3.1.3-debian-15]           |
-| 3.1.3    | 14         | Debian GNU/Linux Bullseye | 3.1.3-debian-14                             | [debian/14/Dockerfile][3.1.3-debian-14]           |
-| 3.1.3    | 13         | Debian GNU/Linux Bullseye | 3.1.3-debian-13                             | [debian/13/Dockerfile][3.1.3-debian-13]           |
-| 3.1.3    | 12         | Debian GNU/Linux Bullseye | 3.1.3-debian-12                             | [debian/12/Dockerfile][3.1.3-debian-12]           |
+| 3.1.3    | 15         | Debian GNU/Linux Bookworm | 3.1.3-debian-15                             | [debian/15/Dockerfile][3.1.3-debian-15]           |
+| 3.1.3    | 14         | Debian GNU/Linux Bookworm | 3.1.3-debian-14                             | [debian/14/Dockerfile][3.1.3-debian-14]           |
+| 3.1.3    | 13         | Debian GNU/Linux Bookworm | 3.1.3-debian-13                             | [debian/13/Dockerfile][3.1.3-debian-13]           |
+| 3.1.3    | 12         | Debian GNU/Linux Bookworm | 3.1.3-debian-12                             | [debian/12/Dockerfile][3.1.3-debian-12]           |
 | 3.1.2    | 15         | Alpine Linux              | 3.1.2-alpine-15                             | [alpine/15/Dockerfile][3.1.2-alpine-15]           |
 | 3.1.2    | 14         | Alpine Linux              | 3.1.2-alpine-14                             | [alpine/14/Dockerfile][3.1.2-alpine-14]           |
 | 3.1.2    | 13         | Alpine Linux              | 3.1.2-alpine-13                             | [alpine/13/Dockerfile][3.1.2-alpine-13]           |
@@ -187,10 +187,10 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.1.2    | 13         | Alpine Linux              | 3.1.2-alpine-13-slim                        | [alpine/13-slim/Dockerfile][3.1.2-alpine-13-slim] |
 | 3.1.2    | 12         | Alpine Linux              | 3.1.2-alpine-12-slim                        | [alpine/12-slim/Dockerfile][3.1.2-alpine-12-slim] |
 | 3.1.2    | 11         | Alpine Linux              | 3.1.2-alpine-11-slim                        | [alpine/11-slim/Dockerfile][3.1.2-alpine-11-slim] |
-| 3.1.2    | 15         | Debian GNU/Linux Bullseye | 3.1.2-debian-15                             | [debian/15/Dockerfile][3.1.2-debian-15]           |
-| 3.1.2    | 14         | Debian GNU/Linux Bullseye | 3.1.2-debian-14                             | [debian/14/Dockerfile][3.1.2-debian-14]           |
-| 3.1.2    | 13         | Debian GNU/Linux Bullseye | 3.1.2-debian-13                             | [debian/13/Dockerfile][3.1.2-debian-13]           |
-| 3.1.2    | 12         | Debian GNU/Linux Bullseye | 3.1.2-debian-12                             | [debian/12/Dockerfile][3.1.2-debian-12]           |
+| 3.1.2    | 15         | Debian GNU/Linux Bookworm | 3.1.2-debian-15                             | [debian/15/Dockerfile][3.1.2-debian-15]           |
+| 3.1.2    | 14         | Debian GNU/Linux Bookworm | 3.1.2-debian-14                             | [debian/14/Dockerfile][3.1.2-debian-14]           |
+| 3.1.2    | 13         | Debian GNU/Linux Bookworm | 3.1.2-debian-13                             | [debian/13/Dockerfile][3.1.2-debian-13]           |
+| 3.1.2    | 12         | Debian GNU/Linux Bookworm | 3.1.2-debian-12                             | [debian/12/Dockerfile][3.1.2-debian-12]           |
 | 3.1.1    | 15         | Alpine Linux              | 3.1.1-alpine-15                             | [alpine/15/Dockerfile][3.1.1-alpine-15]           |
 | 3.1.1    | 14         | Alpine Linux              | 3.1.1-alpine-14                             | [alpine/14/Dockerfile][3.1.1-alpine-14]           |
 | 3.1.1    | 13         | Alpine Linux              | 3.1.1-alpine-13                             | [alpine/13/Dockerfile][3.1.1-alpine-13]           |

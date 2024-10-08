@@ -7,6 +7,10 @@ distribution_labels = {
   "debian" => "Debian GNU/Linux",
 }
 
+def debian_code_name(type_path)
+  File.readlines("#{type_path}/Dockerfile", chomp: true).first.split("-").last.capitalize
+end
+
 type_paths = []
 alpine_type_paths = Dir.glob("alpine/*") - ["alpine/build.sh"]
 alpine_slim_type_paths = Dir.glob("alpine/*-slim")
@@ -37,7 +41,7 @@ File.readlines(readme_md_path).each do |line|
         type = type_path.gsub("/", "-")
         distribution_id, postgresql_version, = type.split("-")
         distribution = distribution_labels[distribution_id]
-        distribution += " Bullseye" if distribution_id == "debian"
+        distribution += " #{debian_code_name(type_path)}" if distribution_id == "debian"
 
         components[1] = " %-#*s " % [pgroonga_version_width, pgroonga_version]
 
