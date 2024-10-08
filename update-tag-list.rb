@@ -8,10 +8,7 @@ distribution_labels = {
 }
 
 def debian_code_name(type_path)
-  file = File.open("#{type_path}/Dockerfile")
-  code_name = file.readline.chomp.split('-').pop.capitalize
-  file.close
-  code_name
+  File.readlines("#{type_path}/Dockerfile", chomp: true).first.split("-").last.capitalize
 end
 
 type_paths = []
@@ -44,7 +41,7 @@ File.readlines(readme_md_path).each do |line|
         type = type_path.gsub("/", "-")
         distribution_id, postgresql_version, = type.split("-")
         distribution = distribution_labels[distribution_id]
-        distribution += " " + debian_code_name(type_path) if distribution_id == "debian"
+        distribution += " #{debian_code_name(type_path)}" if distribution_id == "debian"
 
         components[1] = " %-#*s " % [pgroonga_version_width, pgroonga_version]
 
