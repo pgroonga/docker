@@ -122,9 +122,6 @@ jobs:
           fi
           # Reduce tests to reduce test time
           rm -r sql/compatibility
-          if [ ${POSTGRESQL_VERSION} -lt 13 ]; then
-            rm sql/full-text-search/text/single/declarative-partitioning.sql
-          fi
           ruby test/prepare.rb > schedule
           popd
           echo "::endgroup"
