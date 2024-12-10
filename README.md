@@ -13,19 +13,16 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 3.2.5    | 15         | Alpine Linux              | 3.2.5-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][3.2.5-alpine-15]           |
 | 3.2.5    | 14         | Alpine Linux              | 3.2.5-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][3.2.5-alpine-14]           |
 | 3.2.5    | 13         | Alpine Linux              | 3.2.5-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][3.2.5-alpine-13]           |
-| 3.2.5    | 12         | Alpine Linux              | 3.2.5-alpine-12, latest-alpine-12           | [alpine/12/Dockerfile][3.2.5-alpine-12]           |
 | 3.2.5    | 17         | Alpine Linux              | 3.2.5-alpine-17-slim, latest-alpine-17-slim | [alpine/17-slim/Dockerfile][3.2.5-alpine-17-slim] |
 | 3.2.5    | 16         | Alpine Linux              | 3.2.5-alpine-16-slim, latest-alpine-16-slim | [alpine/16-slim/Dockerfile][3.2.5-alpine-16-slim] |
 | 3.2.5    | 15         | Alpine Linux              | 3.2.5-alpine-15-slim, latest-alpine-15-slim | [alpine/15-slim/Dockerfile][3.2.5-alpine-15-slim] |
 | 3.2.5    | 14         | Alpine Linux              | 3.2.5-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][3.2.5-alpine-14-slim] |
 | 3.2.5    | 13         | Alpine Linux              | 3.2.5-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][3.2.5-alpine-13-slim] |
-| 3.2.5    | 12         | Alpine Linux              | 3.2.5-alpine-12-slim, latest-alpine-12-slim | [alpine/12-slim/Dockerfile][3.2.5-alpine-12-slim] |
 | 3.2.5    | 17         | Debian GNU/Linux Bookworm | 3.2.5-debian-17, latest-debian-17           | [debian/17/Dockerfile][3.2.5-debian-17]           |
 | 3.2.5    | 16         | Debian GNU/Linux Bookworm | 3.2.5-debian-16, latest-debian-16           | [debian/16/Dockerfile][3.2.5-debian-16]           |
 | 3.2.5    | 15         | Debian GNU/Linux Bookworm | 3.2.5-debian-15, latest-debian-15           | [debian/15/Dockerfile][3.2.5-debian-15]           |
 | 3.2.5    | 14         | Debian GNU/Linux Bookworm | 3.2.5-debian-14, latest-debian-14           | [debian/14/Dockerfile][3.2.5-debian-14]           |
 | 3.2.5    | 13         | Debian GNU/Linux Bookworm | 3.2.5-debian-13, latest-debian-13           | [debian/13/Dockerfile][3.2.5-debian-13]           |
-| 3.2.5    | 12         | Debian GNU/Linux Bookworm | 3.2.5-debian-12, latest-debian-12           | [debian/12/Dockerfile][3.2.5-debian-12]           |
 | 3.2.4    | 17         | Alpine Linux              | 3.2.4-alpine-17                             | [alpine/17/Dockerfile][3.2.4-alpine-17]           |
 | 3.2.4    | 16         | Alpine Linux              | 3.2.4-alpine-16                             | [alpine/16/Dockerfile][3.2.4-alpine-16]           |
 | 3.2.4    | 15         | Alpine Linux              | 3.2.4-alpine-15                             | [alpine/15/Dockerfile][3.2.4-alpine-15]           |
