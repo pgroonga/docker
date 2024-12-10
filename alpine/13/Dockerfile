@@ -8,11 +8,11 @@ RUN \
   apk add --no-cache --virtual=.build-dependencies \
     apache-arrow-dev \
     build-base \
-    clang19-dev \
+    clang$([ $(arch) = "x86_64" ] && echo 19 || echo 18)-dev \
     cmake \
     gettext-dev \
     linux-headers \
-    llvm19 \
+    llvm$([ $(arch) = "x86_64" ] && echo 19 || echo 18) \
     lz4-dev \
     msgpack-c-dev \
     rapidjson-dev \
