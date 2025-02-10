@@ -8,6 +8,12 @@ concurrency:
 jobs:
   build:
     name: ${{ matrix.id }}
+    # Currently, If we use ubuntu-latest(ubuntu-24.04),
+    # compiler crashed as below when we build docker image on Alpine Linux.
+    #
+    # 286.7 ninja: job terminated due to signal 11: /usr/bin/cc ...
+    #
+    # So, we avoid this issue by using ubuntu-22.04.
     runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
