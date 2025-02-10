@@ -1,6 +1,6 @@
 FROM postgres:14-bookworm
 
-ENV PGROONGA_VERSION=3.2.5-1
+ENV PGROONGA_VERSION=4.0.0-1
 RUN \
   apt update && \
   apt install -y -V lsb-release wget && \
