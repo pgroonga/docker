@@ -11,7 +11,25 @@ jobs:
     # Currently, If we use ubuntu-latest(ubuntu-24.04),
     # compiler crashed as below when we build docker image on Alpine Linux.
     #
-    # 286.7 ninja: job terminated due to signal 11: /usr/bin/cc ...
+    # 286.7 ninja: job terminated due to signal 11: /usr/bin/cc
+    # -DGGML_SHARED -DHAVE_CONFIG_H -DLLAMA_SHARED
+    # -Dtsv_query_expander_EXPORTS
+    # -I/build/groonga.build/lib/.. -I/build/groonga.build/lib/../include
+    # -I/build/groonga-15.0.0/lib/../include
+    # -I/build/groonga-15.0.0/lib
+    # -I/build/groonga.build/_deps/llama_cpp-src/src/. -I/build/groonga.build/_deps/llama_cpp-src/src/../include
+    # -I/build/groonga.build/_deps/llama_cpp-src/ggml/src/../include
+    # -I/build/groonga-15.0.0/vendor/mruby/../mruby-source/include -O3
+    # -DNDEBUG -std=gnu99 -fPIC -Wall -Wno-unused-but-set-variable
+    # -Wno-unused-parameter -Wno-pointer-sign -Wfloat-equal -Wformat
+    # -Wno-format-truncation -Wstrict-aliasing=2 -fno-strict-aliasing
+    # -Wno-disabled-optimization -Wpointer-arith -Wbad-function-cast
+    # -Wwrite-strings -Wsign-compare -Wmissing-field-initializers
+    # -Wno-declaration-after-statement -Wno-implicit-fallthrough -MD -MT
+    # plugins/query_expanders/CMakeFiles/tsv_query_expander.dir/tsv.c.o -MF
+    # plugins/query_expanders/CMakeFiles/tsv_query_expander.dir/tsv.c.o.d -o
+    # plugins/query_expanders/CMakeFiles/tsv_query_expander.dir/tsv.c.o -c
+    # /build/groonga-15.0.0/plugins/query_expanders/tsv.c
     #
     # So, we avoid this issue by using ubuntu-22.04.
     runs-on: ubuntu-22.04
