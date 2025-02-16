@@ -1,6 +1,6 @@
 FROM postgres:17-bookworm
 
-ENV PGROONGA_VERSION=4.0.0-1
+ENV PGROONGA_VERSION=4.0.1-1
 ENV POSTGRESQL_VERSION=17
 RUN \
   apt update && \
