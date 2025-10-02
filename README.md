@@ -8,21 +8,36 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 
 | PGroonga | PostgreSQL | Distribution              | Tags                                        | Path                                              |
 | -------- | ---------- | ------------------------- | ------------------------------------------- | ------------------------------------------------- |
-| 4.0.2    | 17         | Alpine Linux              | 4.0.2-alpine-17, latest-alpine-17, latest   | [alpine/17/Dockerfile][4.0.2-alpine-17]           |
-| 4.0.2    | 16         | Alpine Linux              | 4.0.2-alpine-16, latest-alpine-16           | [alpine/16/Dockerfile][4.0.2-alpine-16]           |
-| 4.0.2    | 15         | Alpine Linux              | 4.0.2-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][4.0.2-alpine-15]           |
-| 4.0.2    | 14         | Alpine Linux              | 4.0.2-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][4.0.2-alpine-14]           |
-| 4.0.2    | 13         | Alpine Linux              | 4.0.2-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][4.0.2-alpine-13]           |
-| 4.0.2    | 17         | Alpine Linux              | 4.0.2-alpine-17-slim, latest-alpine-17-slim | [alpine/17-slim/Dockerfile][4.0.2-alpine-17-slim] |
-| 4.0.2    | 16         | Alpine Linux              | 4.0.2-alpine-16-slim, latest-alpine-16-slim | [alpine/16-slim/Dockerfile][4.0.2-alpine-16-slim] |
-| 4.0.2    | 15         | Alpine Linux              | 4.0.2-alpine-15-slim, latest-alpine-15-slim | [alpine/15-slim/Dockerfile][4.0.2-alpine-15-slim] |
-| 4.0.2    | 14         | Alpine Linux              | 4.0.2-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][4.0.2-alpine-14-slim] |
-| 4.0.2    | 13         | Alpine Linux              | 4.0.2-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][4.0.2-alpine-13-slim] |
-| 4.0.2    | 17         | Debian GNU/Linux Bookworm | 4.0.2-debian-17, latest-debian-17           | [debian/17/Dockerfile][4.0.2-debian-17]           |
-| 4.0.2    | 16         | Debian GNU/Linux Bookworm | 4.0.2-debian-16, latest-debian-16           | [debian/16/Dockerfile][4.0.2-debian-16]           |
-| 4.0.2    | 15         | Debian GNU/Linux Bookworm | 4.0.2-debian-15, latest-debian-15           | [debian/15/Dockerfile][4.0.2-debian-15]           |
-| 4.0.2    | 14         | Debian GNU/Linux Bookworm | 4.0.2-debian-14, latest-debian-14           | [debian/14/Dockerfile][4.0.2-debian-14]           |
-| 4.0.2    | 13         | Debian GNU/Linux Bookworm | 4.0.2-debian-13, latest-debian-13           | [debian/13/Dockerfile][4.0.2-debian-13]           |
+| 4.0.4    | 17         | Alpine Linux              | 4.0.4-alpine-17, latest-alpine-17, latest   | [alpine/17/Dockerfile][4.0.4-alpine-17]           |
+| 4.0.4    | 16         | Alpine Linux              | 4.0.4-alpine-16, latest-alpine-16           | [alpine/16/Dockerfile][4.0.4-alpine-16]           |
+| 4.0.4    | 15         | Alpine Linux              | 4.0.4-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][4.0.4-alpine-15]           |
+| 4.0.4    | 14         | Alpine Linux              | 4.0.4-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][4.0.4-alpine-14]           |
+| 4.0.4    | 13         | Alpine Linux              | 4.0.4-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][4.0.4-alpine-13]           |
+| 4.0.4    | 17         | Alpine Linux              | 4.0.4-alpine-17-slim, latest-alpine-17-slim | [alpine/17-slim/Dockerfile][4.0.4-alpine-17-slim] |
+| 4.0.4    | 16         | Alpine Linux              | 4.0.4-alpine-16-slim, latest-alpine-16-slim | [alpine/16-slim/Dockerfile][4.0.4-alpine-16-slim] |
+| 4.0.4    | 15         | Alpine Linux              | 4.0.4-alpine-15-slim, latest-alpine-15-slim | [alpine/15-slim/Dockerfile][4.0.4-alpine-15-slim] |
+| 4.0.4    | 14         | Alpine Linux              | 4.0.4-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][4.0.4-alpine-14-slim] |
+| 4.0.4    | 13         | Alpine Linux              | 4.0.4-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][4.0.4-alpine-13-slim] |
+| 4.0.4    | 17         | Debian GNU/Linux Bookworm | 4.0.4-debian-17, latest-debian-17           | [debian/17/Dockerfile][4.0.4-debian-17]           |
+| 4.0.4    | 16         | Debian GNU/Linux Bookworm | 4.0.4-debian-16, latest-debian-16           | [debian/16/Dockerfile][4.0.4-debian-16]           |
+| 4.0.4    | 15         | Debian GNU/Linux Bookworm | 4.0.4-debian-15, latest-debian-15           | [debian/15/Dockerfile][4.0.4-debian-15]           |
+| 4.0.4    | 14         | Debian GNU/Linux Bookworm | 4.0.4-debian-14, latest-debian-14           | [debian/14/Dockerfile][4.0.4-debian-14]           |
+| 4.0.4    | 13         | Debian GNU/Linux Bookworm | 4.0.4-debian-13, latest-debian-13           | [debian/13/Dockerfile][4.0.4-debian-13]           |
+| 4.0.2    | 17         | Alpine Linux              | 4.0.2-alpine-17                             | [alpine/17/Dockerfile][4.0.2-alpine-17]           |
+| 4.0.2    | 16         | Alpine Linux              | 4.0.2-alpine-16                             | [alpine/16/Dockerfile][4.0.2-alpine-16]           |
+| 4.0.2    | 15         | Alpine Linux              | 4.0.2-alpine-15                             | [alpine/15/Dockerfile][4.0.2-alpine-15]           |
+| 4.0.2    | 14         | Alpine Linux              | 4.0.2-alpine-14                             | [alpine/14/Dockerfile][4.0.2-alpine-14]           |
+| 4.0.2    | 13         | Alpine Linux              | 4.0.2-alpine-13                             | [alpine/13/Dockerfile][4.0.2-alpine-13]           |
+| 4.0.2    | 17         | Alpine Linux              | 4.0.2-alpine-17-slim                        | [alpine/17-slim/Dockerfile][4.0.2-alpine-17-slim] |
+| 4.0.2    | 16         | Alpine Linux              | 4.0.2-alpine-16-slim                        | [alpine/16-slim/Dockerfile][4.0.2-alpine-16-slim] |
+| 4.0.2    | 15         | Alpine Linux              | 4.0.2-alpine-15-slim                        | [alpine/15-slim/Dockerfile][4.0.2-alpine-15-slim] |
+| 4.0.2    | 14         | Alpine Linux              | 4.0.2-alpine-14-slim                        | [alpine/14-slim/Dockerfile][4.0.2-alpine-14-slim] |
+| 4.0.2    | 13         | Alpine Linux              | 4.0.2-alpine-13-slim                        | [alpine/13-slim/Dockerfile][4.0.2-alpine-13-slim] |
+| 4.0.2    | 17         | Debian GNU/Linux Bookworm | 4.0.2-debian-17                             | [debian/17/Dockerfile][4.0.2-debian-17]           |
+| 4.0.2    | 16         | Debian GNU/Linux Bookworm | 4.0.2-debian-16                             | [debian/16/Dockerfile][4.0.2-debian-16]           |
+| 4.0.2    | 15         | Debian GNU/Linux Bookworm | 4.0.2-debian-15                             | [debian/15/Dockerfile][4.0.2-debian-15]           |
+| 4.0.2    | 14         | Debian GNU/Linux Bookworm | 4.0.2-debian-14                             | [debian/14/Dockerfile][4.0.2-debian-14]           |
+| 4.0.2    | 13         | Debian GNU/Linux Bookworm | 4.0.2-debian-13                             | [debian/13/Dockerfile][4.0.2-debian-13]           |
 | 4.0.1    | 17         | Alpine Linux              | 4.0.1-alpine-17                             | [alpine/17/Dockerfile][4.0.1-alpine-17]           |
 | 4.0.1    | 16         | Alpine Linux              | 4.0.1-alpine-16                             | [alpine/16/Dockerfile][4.0.1-alpine-16]           |
 | 4.0.1    | 15         | Alpine Linux              | 4.0.1-alpine-15                             | [alpine/15/Dockerfile][4.0.1-alpine-15]           |
@@ -677,6 +692,21 @@ create extension pgroonga;
 
 please take a look at [PGroonga website](https://pgroonga.github.io/) for details
 
+[4.0.4-alpine-17]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/17/Dockerfile
+[4.0.4-alpine-16]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/16/Dockerfile
+[4.0.4-alpine-15]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/15/Dockerfile
+[4.0.4-alpine-14]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/14/Dockerfile
+[4.0.4-alpine-13]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/13/Dockerfile
+[4.0.4-alpine-17-slim]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/17-slim/Dockerfile
+[4.0.4-alpine-16-slim]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/16-slim/Dockerfile
+[4.0.4-alpine-15-slim]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/15-slim/Dockerfile
+[4.0.4-alpine-14-slim]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/14-slim/Dockerfile
+[4.0.4-alpine-13-slim]: https://github.com/pgroonga/docker/tree/4.0.4/alpine/13-slim/Dockerfile
+[4.0.4-debian-17]: https://github.com/pgroonga/docker/tree/4.0.4/debian/17/Dockerfile
+[4.0.4-debian-16]: https://github.com/pgroonga/docker/tree/4.0.4/debian/16/Dockerfile
+[4.0.4-debian-15]: https://github.com/pgroonga/docker/tree/4.0.4/debian/15/Dockerfile
+[4.0.4-debian-14]: https://github.com/pgroonga/docker/tree/4.0.4/debian/14/Dockerfile
+[4.0.4-debian-13]: https://github.com/pgroonga/docker/tree/4.0.4/debian/13/Dockerfile
 [4.0.2-alpine-17]: https://github.com/pgroonga/docker/tree/4.0.2/alpine/17/Dockerfile
 [4.0.2-alpine-16]: https://github.com/pgroonga/docker/tree/4.0.2/alpine/16/Dockerfile
 [4.0.2-alpine-15]: https://github.com/pgroonga/docker/tree/4.0.2/alpine/15/Dockerfile
