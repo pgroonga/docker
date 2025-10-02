@@ -62,7 +62,7 @@ jobs:
         env:
           PGPASSWORD: pgroonga
         run: |
-          tag="${LATEST_VERSION}-${{ matrix.id }}"
+          tag="latest-${{ matrix.id }}"
           docker_image="groonga/pgroonga:${tag}"
           docker run \
             -d \
