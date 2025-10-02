@@ -153,6 +153,7 @@ jobs:
             docker run \
               --name pgroonga \
               --detach \
+              --env PGDATA=/var/lib/postgresql/${postgresql_version}/docker \
               --env POSTGRES_DB=pgroonga \
               --env POSTGRES_PASSWORD=${PGPASSWORD} \
               --env POSTGRES_USER=pgroonga \
@@ -183,7 +184,7 @@ jobs:
             log_path=pgroonga-$(echo ${platform} | cut -d/ -f2).log
             docker exec pgroonga \
               cp \
-              /var/lib/postgresql/data/pgroonga.log \
+              /var/lib/postgresql/${postgresql_version}/docker/pgroonga.log \
               /host/${log_path}
             sudo chown ${USER}: ${log_path}
             docker kill --signal TERM pgroonga
@@ -203,7 +204,7 @@ jobs:
       - name: Collect logs
         if: always()
         run: |
-          docker exec pgroonga cp /var/lib/postgresql/data/pgroonga.log /host/ || :
+          docker exec pgroonga cp /var/lib/postgresql/${postgresql_version}/docker/pgroonga.log /host/ || :
           sudo chown ${USER}: pgroonga.log || :
       - name: Upload logs
         if: always()
