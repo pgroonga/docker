@@ -1,4 +1,4 @@
-FROM postgres:13-bookworm
+FROM postgres:13-trixie
 
 ENV PGROONGA_VERSION=4.0.4-1
 RUN \
