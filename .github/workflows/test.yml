@@ -62,7 +62,7 @@ jobs:
         env:
           PGPASSWORD: pgroonga
         run: |
-          if [ ${{ github.event_name }} = "schedule" ]; then
+          if [ ${GITHUB_EVENT_NAME} = "schedule" ]; then
             tag="${LATEST_VERSION}-${{ matrix.id }}"
           else
             tag="latest-${{ matrix.id }}"
