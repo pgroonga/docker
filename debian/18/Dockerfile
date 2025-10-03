@@ -5,7 +5,7 @@ ENV POSTGRESQL_VERSION=18
 RUN \
   apt update && \
   apt install -y -V lsb-release wget && \
-  wget https://apache.jfrog.io/artifactory/arrow/debian/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
+  wget https://packages.apache.org/artifactory/arrow/debian/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
   apt install -y -V ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
   rm apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
   wget https://packages.groonga.org/debian/groonga-apt-source-latest-$(lsb_release --codename --short).deb && \
