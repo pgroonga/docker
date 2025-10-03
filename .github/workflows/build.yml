@@ -49,6 +49,7 @@ jobs:
           - "alpine-15-slim"
           - "alpine-14-slim"
           - "alpine-13-slim"
+          - "debian-18"
           - "debian-17"
           - "debian-16"
           - "debian-15"
