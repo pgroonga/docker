@@ -62,7 +62,11 @@ jobs:
         env:
           PGPASSWORD: pgroonga
         run: |
-          tag="latest-${{ matrix.id }}"
+          if [ ${{ github.event_name }} = "schedule" ]; then
+            tag="${LATEST_VERSION}-${{ matrix.id }}"
+          else
+            tag="latest-${{ matrix.id }}"
+          fi
           docker_image="groonga/pgroonga:${tag}"
           docker run \
             -d \
