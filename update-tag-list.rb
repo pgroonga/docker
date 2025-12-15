@@ -53,7 +53,7 @@ File.readlines(readme_md_path).each do |line|
           # type_paths have already sorted to descending order by the version of PostgreSQL.
           # So, when "i == 0" is true, postgresql_version is the latest version.
           #
-          # If the latest vestion get by "components[2].strip",
+          # If the latest version get by "components[2].strip",
           # this script set incorrect the version as the latest version when PostgreSQL is released new version.
           latest_postgresql_version = postgresql_version
         end
