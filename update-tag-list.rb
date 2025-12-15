@@ -29,7 +29,8 @@ File.readlines(readme_md_path).each do |line|
     when / latest /
       components = line.split("|")
 
-      latest_postgresql_version = components[2].strip
+      latest_postgresql_version =
+        alpine_type_paths.sort.reverse[0].split("/")[1]
 
       pgroonga_version_width = components[1].size - 2
       postgresql_version_width = components[2].size - 2
@@ -49,15 +50,6 @@ File.readlines(readme_md_path).each do |line|
 
         components[3] = " %-#*s " % [distribution_width, distribution]
 
-        if i == 0
-          # type_paths have already sorted to descending order by the version of PostgreSQL.
-          # So, when "i == 0" is true, postgresql_version is the latest version.
-          #
-          # If the latest version is obtained by "components[2].strip",
-          # this script incorrectly sets the version as the latest version
-          # when releases a new version of PostgreSQL.
-          latest_postgresql_version = postgresql_version
-        end
         tags = ["#{pgroonga_version}-#{type}", "latest-#{type}"]
         if tags[0] == "#{pgroonga_version}-alpine-#{latest_postgresql_version}"
           tags << "latest"
