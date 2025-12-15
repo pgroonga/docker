@@ -29,6 +29,7 @@ File.readlines(readme_md_path).each do |line|
     when / latest /
       components = line.split("|")
 
+      # "alpine/18" -> "18"
       latest_postgresql_version = alpine_type_paths[0].split("/")[1]
 
       pgroonga_version_width = components[1].size - 2
