@@ -38,7 +38,7 @@ File.readlines(readme_md_path).each do |line|
       tags_width = components[4].size - 2
       path_width = components[5].size - 2
 
-      type_paths.each_with_index do |type_path, i|
+      type_paths.each do |type_path|
         type = type_path.gsub("/", "-")
         distribution_id, postgresql_version, = type.split("-")
         distribution = distribution_labels[distribution_id]
