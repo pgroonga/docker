@@ -12,11 +12,11 @@ def debian_code_name(type_path)
 end
 
 type_paths = []
-alpine_type_paths = Dir.glob("alpine/*") - ["alpine/build.sh"]
-alpine_slim_type_paths = Dir.glob("alpine/*-slim")
+alpine_type_paths = (Dir.glob("alpine/*") - ["alpine/build.sh"]).sort.reverse
+alpine_slim_type_paths = Dir.glob("alpine/*-slim").sort.reverse
 alpine_type_paths -= alpine_slim_type_paths
-type_paths += alpine_type_paths.sort.reverse
-type_paths += alpine_slim_type_paths.sort.reverse
+type_paths += alpine_type_paths
+type_paths += alpine_slim_type_paths
 type_paths += Dir.glob("debian/*").sort.reverse
 
 readme_md_path = File.join(__dir__, "README.md")
@@ -29,7 +29,8 @@ File.readlines(readme_md_path).each do |line|
     when / latest /
       components = line.split("|")
 
-      latest_postgresql_version = components[2].strip
+      # "alpine/18" -> "18"
+      latest_postgresql_version = alpine_type_paths[0].split("/")[1]
 
       pgroonga_version_width = components[1].size - 2
       postgresql_version_width = components[2].size - 2
