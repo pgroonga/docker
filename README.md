@@ -682,17 +682,16 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 ## Quick start
 
 ```shell
-  docker run -d groonga/pgroonga
+docker container run --rm --detach --env POSTGRES_PASSWORD="Please-set-a-password" groonga/pgroonga
 ```
 
 ## How to use
 
 Here is a simple example for use by [docker-compose](https://github.com/docker/compose).
 
-Create `docker-compose.yml` with lines below.
+Create `compose.yaml` with lines below.
 
 ```docker-compose
-version: '2'
 services:
   PGroonga:
     image: groonga/pgroonga:latest
@@ -704,7 +703,7 @@ services:
       POSTGRES_USER: PGroonga
 ```
 
-now You can use `docker-compose up -d` command to start service.
+now You can use `docker compose up -d` command to start service.
 by use any database manage tool to connect to database `PGroonga`,exceute command below to active PGroonga extension
 
 ```SQL
