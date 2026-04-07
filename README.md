@@ -13,19 +13,16 @@ Those images based on [postgres](https://hub.docker.com/_/postgres) and could us
 | 4.0.6    | 16         | Alpine Linux              | 4.0.6-alpine-16, latest-alpine-16           | [alpine/16/Dockerfile][4.0.6-alpine-16]           |
 | 4.0.6    | 15         | Alpine Linux              | 4.0.6-alpine-15, latest-alpine-15           | [alpine/15/Dockerfile][4.0.6-alpine-15]           |
 | 4.0.6    | 14         | Alpine Linux              | 4.0.6-alpine-14, latest-alpine-14           | [alpine/14/Dockerfile][4.0.6-alpine-14]           |
-| 4.0.6    | 13         | Alpine Linux              | 4.0.6-alpine-13, latest-alpine-13           | [alpine/13/Dockerfile][4.0.6-alpine-13]           |
 | 4.0.6    | 18         | Alpine Linux              | 4.0.6-alpine-18-slim, latest-alpine-18-slim | [alpine/18-slim/Dockerfile][4.0.6-alpine-18-slim] |
 | 4.0.6    | 17         | Alpine Linux              | 4.0.6-alpine-17-slim, latest-alpine-17-slim | [alpine/17-slim/Dockerfile][4.0.6-alpine-17-slim] |
 | 4.0.6    | 16         | Alpine Linux              | 4.0.6-alpine-16-slim, latest-alpine-16-slim | [alpine/16-slim/Dockerfile][4.0.6-alpine-16-slim] |
 | 4.0.6    | 15         | Alpine Linux              | 4.0.6-alpine-15-slim, latest-alpine-15-slim | [alpine/15-slim/Dockerfile][4.0.6-alpine-15-slim] |
 | 4.0.6    | 14         | Alpine Linux              | 4.0.6-alpine-14-slim, latest-alpine-14-slim | [alpine/14-slim/Dockerfile][4.0.6-alpine-14-slim] |
-| 4.0.6    | 13         | Alpine Linux              | 4.0.6-alpine-13-slim, latest-alpine-13-slim | [alpine/13-slim/Dockerfile][4.0.6-alpine-13-slim] |
 | 4.0.6    | 18         | Debian GNU/Linux Trixie   | 4.0.6-debian-18, latest-debian-18           | [debian/18/Dockerfile][4.0.6-debian-18]           |
 | 4.0.6    | 17         | Debian GNU/Linux Trixie   | 4.0.6-debian-17, latest-debian-17           | [debian/17/Dockerfile][4.0.6-debian-17]           |
 | 4.0.6    | 16         | Debian GNU/Linux Trixie   | 4.0.6-debian-16, latest-debian-16           | [debian/16/Dockerfile][4.0.6-debian-16]           |
 | 4.0.6    | 15         | Debian GNU/Linux Trixie   | 4.0.6-debian-15, latest-debian-15           | [debian/15/Dockerfile][4.0.6-debian-15]           |
 | 4.0.6    | 14         | Debian GNU/Linux Trixie   | 4.0.6-debian-14, latest-debian-14           | [debian/14/Dockerfile][4.0.6-debian-14]           |
-| 4.0.6    | 13         | Debian GNU/Linux Bookworm | 4.0.6-debian-13, latest-debian-13           | [debian/13/Dockerfile][4.0.6-debian-13]           |
 | 4.0.5    | 18         | Alpine Linux              | 4.0.5-alpine-18                             | [alpine/18/Dockerfile][4.0.5-alpine-18]           |
 | 4.0.5    | 17         | Alpine Linux              | 4.0.5-alpine-17                             | [alpine/17/Dockerfile][4.0.5-alpine-17]           |
 | 4.0.5    | 16         | Alpine Linux              | 4.0.5-alpine-16                             | [alpine/16/Dockerfile][4.0.5-alpine-16]           |
