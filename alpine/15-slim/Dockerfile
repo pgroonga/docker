@@ -14,6 +14,7 @@ RUN \
     linux-headers \
     llvm19 \
     lz4-dev \
+    meson \
     msgpack-c-dev \
     rapidjson-dev \
     ruby \

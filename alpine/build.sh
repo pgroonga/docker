@@ -30,8 +30,9 @@ popd
 wget https://packages.groonga.org/source/pgroonga/pgroonga-${PGROONGA_VERSION}.tar.gz
 tar xf pgroonga-${PGROONGA_VERSION}.tar.gz
 pushd pgroonga-${PGROONGA_VERSION}
-make PGRN_DEBUG=yes HAVE_MSGPACK=1 MSGPACK_PACKAGE_NAME=msgpack-c -j$(nproc)
-make install
+meson setup ../pgroonga.build .
+meson compile -C ../pgroonga.build
+meson install -C ../pgroonga.build
 popd
 
 popd
