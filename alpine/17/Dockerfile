@@ -1,7 +1,7 @@
 FROM postgres:17-alpine
 
-ENV PGROONGA_VERSION=4.0.5 \
-    GROONGA_VERSION=15.2.1
+ENV PGROONGA_VERSION=4.0.6 \
+    GROONGA_VERSION=16.0.1
 
 COPY alpine/build.sh /
 RUN \
