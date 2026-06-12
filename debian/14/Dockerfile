@@ -14,6 +14,7 @@ RUN \
   apt install -y -V \
     postgresql-14-pgdg-pgroonga=${PGROONGA_VERSION} \
     groonga-normalizer-mysql \
+    groonga-plugin-language-model \
     groonga-token-filter-stem \
     groonga-tokenizer-mecab && \
   apt clean && \
