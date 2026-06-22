@@ -53,7 +53,7 @@ jobs:
           - "debian-15"
           - "debian-14"
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Parse ID
         run: |
           set -x
@@ -125,7 +125,7 @@ jobs:
           echo "ref: ${GITHUB_REF}"
           echo "tags: ${TAGS}"
           echo "digest: ${{ steps.build-push.outputs.digest }}"
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           path: pgroonga
           ref: ${{ env.PGROONGA_REF }}
