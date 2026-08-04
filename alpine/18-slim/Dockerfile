@@ -8,11 +8,11 @@ RUN \
   apk add --no-cache --virtual=.build-dependencies \
     apache-arrow-dev \
     build-base \
-    clang19-dev \
+    clang20-dev \
     cmake \
     gettext-dev \
     linux-headers \
-    llvm19 \
+    llvm20 \
     lz4-dev \
     meson \
     msgpack-c-dev \
