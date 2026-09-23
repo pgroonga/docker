@@ -1,6 +1,6 @@
 FROM postgres:15-trixie
 
-ENV PGROONGA_VERSION=4.0.8-1
+ENV PGROONGA_VERSION=4.0.9-1
 RUN \
   apt update && \
   apt install -y -V lsb-release wget && \
